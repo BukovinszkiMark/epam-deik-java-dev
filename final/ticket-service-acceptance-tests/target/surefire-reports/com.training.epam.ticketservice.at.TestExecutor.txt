@@ -1,0 +1,157 @@
+-------------------------------------------------------------------------------
+Test set: com.training.epam.ticketservice.at.TestExecutor
+-------------------------------------------------------------------------------
+Tests run: 17, Failures: 17, Errors: 0, Skipped: 0, Time elapsed: 1,169.881 sec <<< FAILURE!
+the admin account exists by default and can be logged in with the correct password(allow creating accounts and logging in)  Time elapsed: 33.62 sec  <<< FAILURE!
+java.lang.AssertionError: 
+Expected: "Signed in with privileged account 'admin'"
+     but: was "[31md[0m[31me[0m[31ms[0m[31mc[0m[31mr[0m[31mi[0m[31mb[0m[31me[0m[31m [0m[31ma[0m[31mc[0m[31mc[0m[31mo[0m[31mu[0m[31mn[0m[15D[1mdescribe account[0m[KSigned in with privileged account 'admin'"
+	at org.hamcrest.MatcherAssert.assertThat(MatcherAssert.java:20)
+	at org.hamcrest.MatcherAssert.assertThat(MatcherAssert.java:8)
+	at com.training.epam.ticketservice.at.GenericCliProcessStepDefs.theNextLineOfOutputContains(GenericCliProcessStepDefs.java:43)
+	at ?.the next line of the output is "Signed in with privileged account 'admin'"(file:///C:/Users/Hp/Desktop/Beadandok/Java%20fejlesztes%20a%20gyakorlatban/epam-deik-java-dev/final/ticket-service-acceptance-tests/src/test/resources/features/accounts.feature:11)
+
+the admin account can be signed out(allow creating accounts and logging in)  Time elapsed: 41.16 sec  <<< FAILURE!
+java.lang.AssertionError: 
+Expected: "You are not signed in"
+     but: was "[31md[0m[31me[0m[31ms[0m[31mc[0m[31mr[0m[31mi[0m[31mb[0m[31me[0m[31m [0m[31ma[0m[31mc[0m[31mc[0m[31mo[0m[31mu[0m[31mn[0m[15D[1mdescribe account[0m[KYou are not signed in"
+	at org.hamcrest.MatcherAssert.assertThat(MatcherAssert.java:20)
+	at org.hamcrest.MatcherAssert.assertThat(MatcherAssert.java:8)
+	at com.training.epam.ticketservice.at.GenericCliProcessStepDefs.theNextLineOfOutputContains(GenericCliProcessStepDefs.java:43)
+	at ?.the next line of the output is "You are not signed in"(file:///C:/Users/Hp/Desktop/Beadandok/Java%20fejlesztes%20a%20gyakorlatban/epam-deik-java-dev/final/ticket-service-acceptance-tests/src/test/resources/features/accounts.feature:18)
+
+the admin account can not be logged in with incorrect password(allow creating accounts and logging in)  Time elapsed: 20.1 sec  <<< FAILURE!
+java.lang.AssertionError: 
+Expected: "Login failed due to incorrect credentials"
+     but: was "[31ms[0m[31mi[0m[31mg[0m[31mn[0m[31m [0m[31mi[0m[31mn[0m[31m [0m[31mp[0m[31mr[0m[31mi[0m[31mv[0m[31mi[0m[31ml[0m[31me[0m[31mg[0m[31me[0m[17D[1msign in privileged[0m[K admin asdQWE123Login failed due to incorrect credentials"
+	at org.hamcrest.MatcherAssert.assertThat(MatcherAssert.java:20)
+	at org.hamcrest.MatcherAssert.assertThat(MatcherAssert.java:8)
+	at com.training.epam.ticketservice.at.GenericCliProcessStepDefs.theNextLineOfOutputContains(GenericCliProcessStepDefs.java:43)
+	at ?.the next line of the output is "Login failed due to incorrect credentials"(file:///C:/Users/Hp/Desktop/Beadandok/Java%20fejlesztes%20a%20gyakorlatban/epam-deik-java-dev/final/ticket-service-acceptance-tests/src/test/resources/features/accounts.feature:23)
+
+an admin user can create and list movies(allows creating movie descriptions)  Time elapsed: 41.397 sec  <<< FAILURE!
+java.lang.AssertionError: 
+Expected: "Sátántangó (drama, 450 minutes)"
+     but: was "[31ml[0m[31mi[0m[31ms[0m[31mt[0m[31m [0m[31mm[0m[31mo[0m[31mv[0m[31mi[0m[31me[0m[10D[1mlist movies[0m[KSátántangó (drama, 450 minutes)"
+	at org.hamcrest.MatcherAssert.assertThat(MatcherAssert.java:20)
+	at org.hamcrest.MatcherAssert.assertThat(MatcherAssert.java:8)
+	at com.training.epam.ticketservice.at.GenericCliProcessStepDefs.theNextLineOfOutputContains(GenericCliProcessStepDefs.java:43)
+	at ?.the next line of the output is "Sátántangó (drama, 450 minutes)"(file:///C:/Users/Hp/Desktop/Beadandok/Java%20fejlesztes%20a%20gyakorlatban/epam-deik-java-dev/final/ticket-service-acceptance-tests/src/test/resources/features/movies.feature:11)
+
+an admin user can update a movie(allows creating movie descriptions)  Time elapsed: 50.089 sec  <<< FAILURE!
+java.lang.AssertionError: 
+Expected: "Sátántangó (drama, 450 minutes)"
+     but: was "[31ml[0m[31mi[0m[31ms[0m[31mt[0m[31m [0m[31mm[0m[31mo[0m[31mv[0m[31mi[0m[31me[0m[10D[1mlist movies[0m[KSátántangó (drama, 450 minutes)"
+	at org.hamcrest.MatcherAssert.assertThat(MatcherAssert.java:20)
+	at org.hamcrest.MatcherAssert.assertThat(MatcherAssert.java:8)
+	at com.training.epam.ticketservice.at.GenericCliProcessStepDefs.theNextLineOfOutputContains(GenericCliProcessStepDefs.java:43)
+	at ?.the next line of the output is "Sátántangó (drama, 450 minutes)"(file:///C:/Users/Hp/Desktop/Beadandok/Java%20fejlesztes%20a%20gyakorlatban/epam-deik-java-dev/final/ticket-service-acceptance-tests/src/test/resources/features/movies.feature:19)
+
+an admin user can delete a movie(allows creating movie descriptions)  Time elapsed: 50.838 sec  <<< FAILURE!
+java.lang.AssertionError: 
+Expected: "There are no movies at the moment"
+     but: was "[31ml[0m[31mi[0m[31ms[0m[31mt[0m[31m [0m[31mm[0m[31mo[0m[31mv[0m[31mi[0m[31me[0m[10D[1mlist movies[0m[KThere are no movies at the moment"
+	at org.hamcrest.MatcherAssert.assertThat(MatcherAssert.java:20)
+	at org.hamcrest.MatcherAssert.assertThat(MatcherAssert.java:8)
+	at com.training.epam.ticketservice.at.GenericCliProcessStepDefs.theNextLineOfOutputContains(GenericCliProcessStepDefs.java:43)
+	at ?.the next line of the output is "There are no movies at the moment"(file:///C:/Users/Hp/Desktop/Beadandok/Java%20fejlesztes%20a%20gyakorlatban/epam-deik-java-dev/final/ticket-service-acceptance-tests/src/test/resources/features/movies.feature:27)
+
+an unauthenticated user can list movies(allows creating movie descriptions)  Time elapsed: 50.089 sec  <<< FAILURE!
+java.lang.AssertionError: 
+Expected: "Sátántangó (drama, 450 minutes)"
+     but: was "[31ml[0m[31mi[0m[31ms[0m[31mt[0m[31m [0m[31mm[0m[31mo[0m[31mv[0m[31mi[0m[31me[0m[10D[1mlist movies[0m[KSátántangó (drama, 450 minutes)"
+	at org.hamcrest.MatcherAssert.assertThat(MatcherAssert.java:20)
+	at org.hamcrest.MatcherAssert.assertThat(MatcherAssert.java:8)
+	at com.training.epam.ticketservice.at.GenericCliProcessStepDefs.theNextLineOfOutputContains(GenericCliProcessStepDefs.java:43)
+	at ?.the next line of the output is "Sátántangó (drama, 450 minutes)"(file:///C:/Users/Hp/Desktop/Beadandok/Java%20fejlesztes%20a%20gyakorlatban/epam-deik-java-dev/final/ticket-service-acceptance-tests/src/test/resources/features/movies.feature:35)
+
+an admin user can create and list rooms(allow creating, reading, updating and deleting rooms where the screenings will happen)  Time elapsed: 42.452 sec  <<< FAILURE!
+java.lang.AssertionError: 
+Expected: "Room Pedersoli with 200 seats, 20 rows and 10 columns"
+     but: was "[31ml[0m[31mi[0m[31ms[0m[31mt[0m[31m [0m[31mr[0m[31mo[0m[31mo[0m[31mm[0m[9D[1mlist rooms[0m[KRoom Pedersoli with 200 seats, 20 rows and 10 columns"
+	at org.hamcrest.MatcherAssert.assertThat(MatcherAssert.java:20)
+	at org.hamcrest.MatcherAssert.assertThat(MatcherAssert.java:8)
+	at com.training.epam.ticketservice.at.GenericCliProcessStepDefs.theNextLineOfOutputContains(GenericCliProcessStepDefs.java:43)
+	at ?.the next line of the output is "Room Pedersoli with 200 seats, 20 rows and 10 columns"(file:///C:/Users/Hp/Desktop/Beadandok/Java%20fejlesztes%20a%20gyakorlatban/epam-deik-java-dev/final/ticket-service-acceptance-tests/src/test/resources/features/rooms.feature:12)
+
+an admin user can update a room(allow creating, reading, updating and deleting rooms where the screenings will happen)  Time elapsed: 69.033 sec  <<< FAILURE!
+java.lang.AssertionError: 
+Expected: "Room Pedersoli with 100 seats, 10 rows and 10 columns"
+     but: was "[31ml[0m[31mi[0m[31ms[0m[31mt[0m[31m [0m[31mr[0m[31mo[0m[31mo[0m[31mm[0m[9D[1mlist rooms[0m[KRoom Pedersoli with 100 seats, 10 rows and 10 columns"
+	at org.hamcrest.MatcherAssert.assertThat(MatcherAssert.java:20)
+	at org.hamcrest.MatcherAssert.assertThat(MatcherAssert.java:8)
+	at com.training.epam.ticketservice.at.GenericCliProcessStepDefs.theNextLineOfOutputContains(GenericCliProcessStepDefs.java:43)
+	at ?.the next line of the output is "Room Pedersoli with 100 seats, 10 rows and 10 columns"(file:///C:/Users/Hp/Desktop/Beadandok/Java%20fejlesztes%20a%20gyakorlatban/epam-deik-java-dev/final/ticket-service-acceptance-tests/src/test/resources/features/rooms.feature:20)
+
+an admin user can delete a room(allow creating, reading, updating and deleting rooms where the screenings will happen)  Time elapsed: 53.912 sec  <<< FAILURE!
+java.lang.AssertionError: 
+Expected: "There are no rooms at the moment"
+     but: was "[31ml[0m[31mi[0m[31ms[0m[31mt[0m[31m [0m[31mr[0m[31mo[0m[31mo[0m[31mm[0m[9D[1mlist rooms[0m[KThere are no rooms at the moment"
+	at org.hamcrest.MatcherAssert.assertThat(MatcherAssert.java:20)
+	at org.hamcrest.MatcherAssert.assertThat(MatcherAssert.java:8)
+	at com.training.epam.ticketservice.at.GenericCliProcessStepDefs.theNextLineOfOutputContains(GenericCliProcessStepDefs.java:43)
+	at ?.the next line of the output is "There are no rooms at the moment"(file:///C:/Users/Hp/Desktop/Beadandok/Java%20fejlesztes%20a%20gyakorlatban/epam-deik-java-dev/final/ticket-service-acceptance-tests/src/test/resources/features/rooms.feature:28)
+
+an unauthenticated user can list rooms(allow creating, reading, updating and deleting rooms where the screenings will happen)  Time elapsed: 57.074 sec  <<< FAILURE!
+java.lang.AssertionError: 
+Expected: "Room Pedersoli with 200 seats, 20 rows and 10 columns"
+     but: was "[31ml[0m[31mi[0m[31ms[0m[31mt[0m[31m [0m[31mr[0m[31mo[0m[31mo[0m[31mm[0m[9D[1mlist rooms[0m[KRoom Pedersoli with 200 seats, 20 rows and 10 columns"
+	at org.hamcrest.MatcherAssert.assertThat(MatcherAssert.java:20)
+	at org.hamcrest.MatcherAssert.assertThat(MatcherAssert.java:8)
+	at com.training.epam.ticketservice.at.GenericCliProcessStepDefs.theNextLineOfOutputContains(GenericCliProcessStepDefs.java:43)
+	at ?.the next line of the output is "Room Pedersoli with 200 seats, 20 rows and 10 columns"(file:///C:/Users/Hp/Desktop/Beadandok/Java%20fejlesztes%20a%20gyakorlatban/epam-deik-java-dev/final/ticket-service-acceptance-tests/src/test/resources/features/rooms.feature:36)
+
+The admin user can create and query screenings(allows creating, deleting and listing screenings)  Time elapsed: 110.131 sec  <<< FAILURE!
+java.lang.AssertionError: 
+Expected: "Sátántangó (drama, 450 minutes), screened in room Pedersoli, at 2021-03-15 10:45"
+     but: was "[31ml[0m[31mi[0m[31ms[0m[31mt[0m[31m [0m[31ms[0m[31mc[0m[31mr[0m[31me[0m[31me[0m[31mn[0m[31mi[0m[31mn[0m[31mg[0m[14D[1mlist screenings[0m[KThere are no screenings"
+	at org.hamcrest.MatcherAssert.assertThat(MatcherAssert.java:20)
+	at org.hamcrest.MatcherAssert.assertThat(MatcherAssert.java:8)
+	at com.training.epam.ticketservice.at.GenericCliProcessStepDefs.theNextLineOfOutputContains(GenericCliProcessStepDefs.java:43)
+	at ?.the next line of the output is "Sátántangó (drama, 450 minutes), screened in room Pedersoli, at 2021-03-15 10:45"(file:///C:/Users/Hp/Desktop/Beadandok/Java%20fejlesztes%20a%20gyakorlatban/epam-deik-java-dev/final/ticket-service-acceptance-tests/src/test/resources/features/screenings.feature:18)
+
+The admin can not create overlapping screenings in the same room(allows creating, deleting and listing screenings)  Time elapsed: 116.634 sec  <<< FAILURE!
+java.lang.AssertionError: 
+Expected: "There is an overlapping screening"
+     but: was "[31mc[0m[31mr[0m[31me[0m[31ma[0m[31mt[0m[31me[0m[31m [0m[31ms[0m[31mc[0m[31mr[0m[31me[0m[31me[0m[31mn[0m[31mi[0m[31mn[0m[15D[1mcreate screening[0m[K \"Spirited Away\" Pedersoli \"2021-03-15 10:50\"[31mText '2021-03-15 10:50' could not be parsed: Unable to obtain LocalDateTime from TemporalAccessor: {MonthOfYear=3, HourOfAmPm=10, WeekBasedYear[WeekFields[MONDAY,4]]=2021, MinuteOfHour=50, DayOfYear=15},ISO of type java.time.format.Parsed[0m"
+	at org.hamcrest.MatcherAssert.assertThat(MatcherAssert.java:20)
+	at org.hamcrest.MatcherAssert.assertThat(MatcherAssert.java:8)
+	at com.training.epam.ticketservice.at.GenericCliProcessStepDefs.theNextLineOfOutputContains(GenericCliProcessStepDefs.java:43)
+	at ?.the next line of the output is "There is an overlapping screening"(file:///C:/Users/Hp/Desktop/Beadandok/Java%20fejlesztes%20a%20gyakorlatban/epam-deik-java-dev/final/ticket-service-acceptance-tests/src/test/resources/features/screenings.feature:26)
+
+The admin can create overlapping screenings in different rooms(allows creating, deleting and listing screenings)  Time elapsed: 109.04 sec  <<< FAILURE!
+java.lang.AssertionError: 
+Expected: "Sátántangó (drama, 450 minutes), screened in room Pedersoli, at 2021-03-15 10:45"
+     but: was "[31ml[0m[31mi[0m[31ms[0m[31mt[0m[31m [0m[31ms[0m[31mc[0m[31mr[0m[31me[0m[31me[0m[31mn[0m[31mi[0m[31mn[0m[31mg[0m[14D[1mlist screenings[0m[KThere are no screenings"
+	at org.hamcrest.MatcherAssert.assertThat(MatcherAssert.java:20)
+	at org.hamcrest.MatcherAssert.assertThat(MatcherAssert.java:8)
+	at com.training.epam.ticketservice.at.GenericCliProcessStepDefs.theNextLineOfOutputContains(GenericCliProcessStepDefs.java:43)
+	at ?.the next line of the output is "Sátántangó (drama, 450 minutes), screened in room Pedersoli, at 2021-03-15 10:45"(file:///C:/Users/Hp/Desktop/Beadandok/Java%20fejlesztes%20a%20gyakorlatban/epam-deik-java-dev/final/ticket-service-acceptance-tests/src/test/resources/features/screenings.feature:36)
+
+The admin can not create screenings during a 10 minute long breaks after another screening in the same room(allows creating, deleting and listing screenings)  Time elapsed: 99.18 sec  <<< FAILURE!
+java.lang.AssertionError: 
+Expected: "This would start in the break period after another screening in this room"
+     but: was "[31mc[0m[31mr[0m[31me[0m[31ma[0m[31mt[0m[31me[0m[31m [0m[31ms[0m[31mc[0m[31mr[0m[31me[0m[31me[0m[31mn[0m[31mi[0m[31mn[0m[15D[1mcreate screening[0m[K \"Spirited Away\" Pedersoli \"2021-03-15 18:39\"[31mText '2021-03-15 18:39' could not be parsed: Invalid value for ClockHourOfAmPm (valid values 1 - 12): 18[0m"
+	at org.hamcrest.MatcherAssert.assertThat(MatcherAssert.java:20)
+	at org.hamcrest.MatcherAssert.assertThat(MatcherAssert.java:8)
+	at com.training.epam.ticketservice.at.GenericCliProcessStepDefs.theNextLineOfOutputContains(GenericCliProcessStepDefs.java:43)
+	at ?.the next line of the output is "This would start in the break period after another screening in this room"(file:///C:/Users/Hp/Desktop/Beadandok/Java%20fejlesztes%20a%20gyakorlatban/epam-deik-java-dev/final/ticket-service-acceptance-tests/src/test/resources/features/screenings.feature:44)
+
+The admin can create screenings even if there is a break after a screening in a different room(allows creating, deleting and listing screenings)  Time elapsed: 108.935 sec  <<< FAILURE!
+java.lang.AssertionError: 
+Expected: "Sátántangó (drama, 450 minutes), screened in room Pedersoli, at 2021-03-15 11:00"
+     but: was "[31ml[0m[31mi[0m[31ms[0m[31mt[0m[31m [0m[31ms[0m[31mc[0m[31mr[0m[31me[0m[31me[0m[31mn[0m[31mi[0m[31mn[0m[31mg[0m[14D[1mlist screenings[0m[KThere are no screenings"
+	at org.hamcrest.MatcherAssert.assertThat(MatcherAssert.java:20)
+	at org.hamcrest.MatcherAssert.assertThat(MatcherAssert.java:8)
+	at com.training.epam.ticketservice.at.GenericCliProcessStepDefs.theNextLineOfOutputContains(GenericCliProcessStepDefs.java:43)
+	at ?.the next line of the output is "Sátántangó (drama, 450 minutes), screened in room Pedersoli, at 2021-03-15 11:00"(file:///C:/Users/Hp/Desktop/Beadandok/Java%20fejlesztes%20a%20gyakorlatban/epam-deik-java-dev/final/ticket-service-acceptance-tests/src/test/resources/features/screenings.feature:54)
+
+The admin user can delete screenings(allows creating, deleting and listing screenings)  Time elapsed: 113.682 sec  <<< FAILURE!
+java.lang.AssertionError: 
+Expected: "There are no screenings"
+     but: was "[31ml[0m[31mi[0m[31ms[0m[31mt[0m[31m [0m[31ms[0m[31mc[0m[31mr[0m[31me[0m[31me[0m[31mn[0m[31mi[0m[31mn[0m[31mg[0m[14D[1mlist screenings[0m[KThere are no screenings"
+	at org.hamcrest.MatcherAssert.assertThat(MatcherAssert.java:20)
+	at org.hamcrest.MatcherAssert.assertThat(MatcherAssert.java:8)
+	at com.training.epam.ticketservice.at.GenericCliProcessStepDefs.theNextLineOfOutputContains(GenericCliProcessStepDefs.java:43)
+	at ?.the next line of the output is "There are no screenings"(file:///C:/Users/Hp/Desktop/Beadandok/Java%20fejlesztes%20a%20gyakorlatban/epam-deik-java-dev/final/ticket-service-acceptance-tests/src/test/resources/features/screenings.feature:63)
+
