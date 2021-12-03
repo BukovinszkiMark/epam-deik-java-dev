@@ -1,14 +1,25 @@
-package com.epam.training.ticketservice.core.Screening;
+package com.epam.training.ticketservice.core.screening;
 
-import com.epam.training.ticketservice.core.Movie.Movie;
-import com.epam.training.ticketservice.core.Room.Room;
+import com.epam.training.ticketservice.core.movie.Movie;
+import com.epam.training.ticketservice.core.room.Room;
 
+import javax.persistence.Entity;
+import javax.persistence.GeneratedValue;
+import javax.persistence.GenerationType;
+import javax.persistence.Id;
+import javax.persistence.ManyToOne;
 import java.time.LocalDateTime;
 import java.util.Objects;
 
+@Entity
 public class Screening {
 
+    @Id
+    @GeneratedValue(strategy = GenerationType.AUTO)
+    private Integer id;
+    @ManyToOne
     private Movie movie;
+    @ManyToOne
     private Room room;
     private LocalDateTime dateTime;
 

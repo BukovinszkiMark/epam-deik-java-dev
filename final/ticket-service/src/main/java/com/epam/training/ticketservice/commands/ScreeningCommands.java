@@ -1,9 +1,9 @@
 package com.epam.training.ticketservice.commands;
 
-import com.epam.training.ticketservice.core.Movie.Movie;
-import com.epam.training.ticketservice.core.Room.Room;
-import com.epam.training.ticketservice.core.Screening.Screening;
-import com.epam.training.ticketservice.core.User.User;
+import com.epam.training.ticketservice.core.movie.Movie;
+import com.epam.training.ticketservice.core.room.Room;
+import com.epam.training.ticketservice.core.screening.Screening;
+import com.epam.training.ticketservice.core.user.User;
 import com.epam.training.ticketservice.services.AccountService;
 import com.epam.training.ticketservice.services.MovieService;
 import com.epam.training.ticketservice.services.RoomService;
@@ -39,7 +39,7 @@ public class ScreeningCommands {
     public String createScreening(String movieName, String roomName, String dateTimeText) {
         Movie movie = movieService.getByName(movieName).get();
         Room room = roomService.getByName(roomName).get();
-        LocalDateTime dateTime = LocalDateTime.parse(dateTimeText, DateTimeFormatter.ofPattern("YYYY-MM-DD hh:mm"));
+        LocalDateTime dateTime = LocalDateTime.parse(dateTimeText, DateTimeFormatter.ofPattern("yyyy-MM-dd HH:mm"));
         return screeningService.createScreening(movie, room, dateTime);
     }
 
@@ -48,7 +48,7 @@ public class ScreeningCommands {
     public void deleteScreening(String movieName, String roomName, String dateTimeText) {
         Movie movie = movieService.getByName(movieName).get();
         Room room = roomService.getByName(roomName).get();
-        LocalDateTime dateTime = LocalDateTime.parse(dateTimeText, DateTimeFormatter.ofPattern("YYYY-MM-DD hh:mm"));
+        LocalDateTime dateTime = LocalDateTime.parse(dateTimeText, DateTimeFormatter.ofPattern("yyyy-MM-dd HH:mm"));
         screeningService.deleteScreening(movie, room, dateTime);
     }
 
@@ -64,7 +64,7 @@ public class ScreeningCommands {
             Room r = s.getRoom();
             String lineToAdd = m.getName() + " (" + m.getGenre() + ", " + m.getMinutes()
                     + " minutes), screened in room " + r.getName() + ", at "
-                    + s.getDateTime().format(DateTimeFormatter.ofPattern("YYYY-MM-DD hh:mm"));
+                    + s.getDateTime().format(DateTimeFormatter.ofPattern("yyyy-MM-dd HH:mm")) + System.lineSeparator();
             returnString += lineToAdd;
         }
         return returnString;

@@ -1,6 +1,7 @@
 package com.epam.training.ticketservice.commands;
 
 import com.epam.training.ticketservice.services.AccountService;
+import com.epam.training.ticketservice.services.impl.AccountServiceImpl;
 import org.springframework.shell.standard.ShellComponent;
 import org.springframework.shell.standard.ShellMethod;
 

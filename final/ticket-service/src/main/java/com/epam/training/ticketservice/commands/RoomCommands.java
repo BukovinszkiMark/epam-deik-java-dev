@@ -1,7 +1,7 @@
 package com.epam.training.ticketservice.commands;
 
-import com.epam.training.ticketservice.core.Room.Room;
-import com.epam.training.ticketservice.core.User.User;
+import com.epam.training.ticketservice.core.room.Room;
+import com.epam.training.ticketservice.core.user.User;
 import com.epam.training.ticketservice.services.AccountService;
 import com.epam.training.ticketservice.services.RoomService;
 import org.springframework.shell.Availability;

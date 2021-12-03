@@ -1,8 +1,8 @@
 package com.epam.training.ticketservice.services;
 
-import com.epam.training.ticketservice.core.Movie.Movie;
-import com.epam.training.ticketservice.core.Room.Room;
-import com.epam.training.ticketservice.core.Screening.Screening;
+import com.epam.training.ticketservice.core.movie.Movie;
+import com.epam.training.ticketservice.core.room.Room;
+import com.epam.training.ticketservice.core.screening.Screening;
 
 import java.time.LocalDateTime;
 import java.util.List;

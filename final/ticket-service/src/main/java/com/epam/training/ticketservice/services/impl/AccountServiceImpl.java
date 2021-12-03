@@ -1,6 +1,7 @@
 package com.epam.training.ticketservice.services.impl;
 
-import com.epam.training.ticketservice.core.User.User;
+import com.epam.training.ticketservice.core.user.User;
+import com.epam.training.ticketservice.core.user.UserRepository;
 import com.epam.training.ticketservice.services.AccountService;
 import org.springframework.stereotype.Service;
 
@@ -13,7 +14,11 @@ import java.util.Optional;
 public class AccountServiceImpl implements AccountService {
 
     private User currentUser = null;
-    private List<User> userList;
+    private UserRepository userRepository;
+
+    public AccountServiceImpl(UserRepository userRepository) {
+        this.userRepository = userRepository;
+    }
 
     public void setCurrentUser(User currentUser) {
         this.currentUser = currentUser;
@@ -21,8 +26,7 @@ public class AccountServiceImpl implements AccountService {
 
     @PostConstruct
     public void init() {
-        userList = new ArrayList<>();
-        userList.add(new User("admin", "admin", User.Role.ADMIN));
+        userRepository.save(new User("admin", "admin", User.Role.ADMIN));
     }
 
     @Override
@@ -55,9 +59,7 @@ public class AccountServiceImpl implements AccountService {
     }
 
     public Optional<User> getByName(String username) {
-        return userList.stream()
-                .filter(user -> user.getUsername().equals(username))
-                .findFirst();
+        return userRepository.findByUsername(username);
     }
 
     @Override

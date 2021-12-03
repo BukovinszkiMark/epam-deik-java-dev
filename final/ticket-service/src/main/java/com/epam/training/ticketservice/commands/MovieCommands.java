@@ -1,7 +1,7 @@
 package com.epam.training.ticketservice.commands;
 
-import com.epam.training.ticketservice.core.Movie.Movie;
-import com.epam.training.ticketservice.core.User.User;
+import com.epam.training.ticketservice.core.movie.Movie;
+import com.epam.training.ticketservice.core.user.User;
 import com.epam.training.ticketservice.services.AccountService;
 import com.epam.training.ticketservice.services.MovieService;
 import org.springframework.shell.Availability;

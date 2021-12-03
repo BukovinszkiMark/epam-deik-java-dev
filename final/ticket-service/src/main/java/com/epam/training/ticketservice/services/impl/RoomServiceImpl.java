@@ -1,6 +1,8 @@
 package com.epam.training.ticketservice.services.impl;
 
-import com.epam.training.ticketservice.core.Room.Room;
+import com.epam.training.ticketservice.core.room.Room;
+import com.epam.training.ticketservice.core.room.RoomRepository;
+import com.epam.training.ticketservice.core.user.UserRepository;
 import com.epam.training.ticketservice.services.RoomService;
 import org.springframework.stereotype.Service;
 
@@ -13,16 +15,15 @@ import java.util.stream.Collectors;
 @Service
 public class RoomServiceImpl implements RoomService {
 
-    private List<Room> roomList;
+    private RoomRepository roomRepository;
 
-    @PostConstruct
-    public void init() {
-        this.roomList = new ArrayList<>();
+    public RoomServiceImpl(RoomRepository roomRepository) {
+        this.roomRepository = roomRepository;
     }
 
     @Override
     public void createRoom(String name, int rows, int columns) {
-        roomList.add(new Room(name, rows, columns));
+        roomRepository.save(new Room(name, rows, columns));
     }
 
     @Override
@@ -30,25 +31,22 @@ public class RoomServiceImpl implements RoomService {
         Optional<Room> room = getByName(name);
         if (room.isPresent()) {
             room.get().update(name, rows, columns);
+            roomRepository.save(room.get());
         }
     }
 
     @Override
     public void deleteRoom(String name) {
-        this.roomList = roomList.stream()
-                .filter(room -> !(room.getName().equals(name)))
-                .collect(Collectors.toList());
+        roomRepository.delete(getByName(name).get());
     }
 
     @Override
     public List<Room> getRoomList() {
-        return roomList;
+        return roomRepository.findAll();
     }
 
     @Override
     public Optional<Room> getByName(String name) {
-        return roomList.stream()
-                .filter(room -> room.getName().equals(name))
-                .findFirst();
+        return roomRepository.findByName(name);
     }
 }

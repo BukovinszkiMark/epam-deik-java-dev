@@ -1,9 +1,19 @@
-package com.epam.training.ticketservice.core.Room;
+package com.epam.training.ticketservice.core.room;
 
+import javax.persistence.Column;
+import javax.persistence.Entity;
+import javax.persistence.GeneratedValue;
+import javax.persistence.GenerationType;
+import javax.persistence.Id;
 import java.util.Objects;
 
+@Entity
 public class Room {
 
+    @Id
+    @GeneratedValue(strategy = GenerationType.AUTO)
+    private Integer id;
+    @Column(unique = true)
     private String name;
     private int rows;
     private int columns;

@@ -1,8 +1,9 @@
 package com.epam.training.ticketservice.services.impl;
 
-import com.epam.training.ticketservice.core.Movie.Movie;
-import com.epam.training.ticketservice.core.Room.Room;
-import com.epam.training.ticketservice.core.Screening.Screening;
+import com.epam.training.ticketservice.core.movie.Movie;
+import com.epam.training.ticketservice.core.room.Room;
+import com.epam.training.ticketservice.core.screening.Screening;
+import com.epam.training.ticketservice.core.screening.ScreeningRepository;
 import com.epam.training.ticketservice.services.ScreeningService;
 import org.springframework.stereotype.Service;
 
@@ -16,52 +17,63 @@ import java.util.stream.Collectors;
 @Service
 public class ScreeningServiceImpl implements ScreeningService {
 
-    private List<Screening> screeningList;
+    private ScreeningRepository screeningRepository;
 
-    @PostConstruct
-    public void init() {
-        this.screeningList = new ArrayList<>();
+    public ScreeningServiceImpl(ScreeningRepository screeningRepository) {
+        this.screeningRepository = screeningRepository;
     }
 
     @Override
     public String createScreening(Movie movie, Room room, LocalDateTime dateTime) {
-        isNotOverlappingAnotherScreeningOrBreakTime(movie,room, dateTime);
-        System.out.println(movie != null);
-        System.out.println(room != null);
+        if (isOverlappingAnotherScreening(movie,room, dateTime)) {
+            return "There is an overlapping screening";
+        }
+        if (isOverlappingAnotherScreeningsBreakTime(movie,room, dateTime)) {
+            return "This would start in the break period after another screening in this room";
+        }
         if (movie != null && room != null) {
-            screeningList.add(new Screening(movie, room, dateTime));
+            screeningRepository.save(new Screening(movie, room, dateTime));
         }
         return null;
     }
 
-    private boolean isNotOverlappingAnotherScreeningOrBreakTime(Movie movie, Room room, LocalDateTime dateTime) {
-        for (Screening s : screeningList) {
-            LocalDateTime start = s.getDateTime();
-            LocalDateTime endWithBreakIncluded = start.plusMinutes(s.getMovie().getMinutes() + 10);
-            if (dateTime.isAfter(start) && dateTime.isBefore(endWithBreakIncluded)) {
-                return false;
+    private boolean isOverlappingAnotherScreening(Movie movie, Room room, LocalDateTime dateTime) {
+        for (Screening s : screeningRepository.findAll()) {
+            if (s.getRoom().equals(room)) {
+                LocalDateTime start = s.getDateTime();
+                LocalDateTime end = start.plusMinutes(s.getMovie().getMinutes());
+                if (dateTime.isAfter(start) && dateTime.isBefore(end)) {
+                    return true;
+                }
             }
         }
-        return true;
+        return false;
+    }
+
+    private boolean isOverlappingAnotherScreeningsBreakTime(Movie movie, Room room, LocalDateTime dateTime) {
+        for (Screening s : screeningRepository.findAll()) {
+            if (s.getRoom().equals(room)) {
+                LocalDateTime start = s.getDateTime().plusMinutes(s.getMovie().getMinutes());
+                LocalDateTime endWithBreakIncluded = start.plusMinutes(10);
+                if (dateTime.isAfter(start) && dateTime.isBefore(endWithBreakIncluded)) {
+                    return true;
+                }
+            }
+        }
+        return false;
     }
 
     @Override
     public void deleteScreening(Movie movie, Room room, LocalDateTime dateTime) {
-        Screening toCompare = new Screening(movie, room, dateTime);
-        this.screeningList = screeningList.stream()
-                .filter(screening -> !(screening.equals(toCompare)))
-                .collect(Collectors.toList());
+        screeningRepository.delete(get(movie, room, dateTime).get());
     }
 
     @Override
     public List<Screening> getScreeningList() {
-        return screeningList;
+        return screeningRepository.findAll();
     }
 
     private Optional<Screening> get(Movie movie, Room room, LocalDateTime datetime) {
-        Screening toCompare = new Screening(movie, room, datetime);
-        return screeningList.stream()
-                .filter(screening -> screening.equals(toCompare))
-                .findFirst();
+        return screeningRepository.findByMovieAndRoomAndDateTime(movie, room, datetime);
     }
 }

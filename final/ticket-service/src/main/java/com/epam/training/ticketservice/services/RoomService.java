@@ -1,6 +1,6 @@
 package com.epam.training.ticketservice.services;
 
-import com.epam.training.ticketservice.core.Room.Room;
+import com.epam.training.ticketservice.core.room.Room;
 
 import java.util.List;
 import java.util.Optional;

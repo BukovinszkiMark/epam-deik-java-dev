@@ -1,300 +1,79 @@
 <?xml version="1.0" encoding="UTF-8" ?>
-<testsuite tests="17" failures="17" name="com.training.epam.ticketservice.at.TestExecutor" time="1,167.366" errors="0" skipped="0">
+<testsuite tests="17" failures="0" name="com.training.epam.ticketservice.at.TestExecutor" time="636.279" errors="0" skipped="0">
   <properties>
-    <property name="java.vendor" value="AdoptOpenJDK"/>
-    <property name="sun.java.launcher" value="SUN_STANDARD"/>
-    <property name="os.name" value="Windows 10"/>
-    <property name="sun.desktop" value="windows"/>
-    <property name="java.vm.specification.vendor" value="Oracle Corporation"/>
-    <property name="java.runtime.version" value="16.0.1+9"/>
-    <property name="user.name" value="Hp"/>
-    <property name="java.compiler" value="j9jit29"/>
-    <property name="os.encoding" value="UTF8"/>
-    <property name="guice.disable.misplaced.annotation.check" value="true"/>
-    <property name="com.ibm.util.extralibs.properties" value=""/>
-    <property name="com.ibm.jcl.checkClassPath" value=""/>
-    <property name="user.language" value="hu"/>
-    <property name="com.ibm.oti.vm.bootstrap.library.path" value="C:\Users\Hp\.sdkman\candidates\java\current\bin\default;C:\Users\Hp\.sdkman\candidates\java\current\bin"/>
-    <property name="sun.boot.library.path" value="C:\Users\Hp\.sdkman\candidates\java\current\bin\default;C:\Users\Hp\.sdkman\candidates\java\current\bin"/>
-    <property name="classworlds.conf" value="C:/Users/Hp/.sdkman/candidates/maven/current/bin/m2.conf"/>
-    <property name="jdk.extensions.version" value="16.0.1.0"/>
-    <property name="java.version" value="16.0.1"/>
-    <property name="user.timezone" value="Europe/Budapest"/>
-    <property name="com.ibm.system.agent.path" value="C:\Users\Hp\.sdkman\candidates\java\current\bin"/>
-    <property name="sun.arch.data.model" value="64"/>
-    <property name="com.ibm.oti.vm.library.version" value="29"/>
-    <property name="sun.jnu.encoding" value="Cp1250"/>
-    <property name="file.encoding.pkg" value="sun.io"/>
-    <property name="file.separator" value="\"/>
-    <property name="java.specification.name" value="Java Platform API Specification"/>
-    <property name="maven.conf" value="C:/Users/Hp/.sdkman/candidates/maven/current/conf"/>
-    <property name="java.class.version" value="60.0"/>
-    <property name="user.country" value="HU"/>
-    <property name="java.home" value="C:\Users\Hp\.sdkman\candidates\java\current"/>
-    <property name="java.vm.info" value="JRE 16 Windows 10 amd64-64-Bit Compressed References 20210421_24 (JIT enabled, AOT enabled)
-OpenJ9   - b4cc246d9
-OMR      - 162e6f729
-JCL      - cea22090ecf based on jdk-16.0.1+9"/>
-    <property name="os.version" value="10.0"/>
-    <property name="jdk.boot.class.path.append" value=""/>
-    <property name="sun.nio.MaxDirectMemorySize" value="1631551488"/>
-    <property name="java.awt.fonts" value=""/>
-    <property name="path.separator" value=";"/>
-    <property name="java.vm.version" value="openj9-0.26.0"/>
-    <property name="user.variant" value=""/>
-    <property name="java.awt.printerjob" value="sun.awt.windows.WPrinterJob"/>
-    <property name="jdk.extensions.name" value="Extensions for OpenJDK for Eclipse OpenJ9"/>
-    <property name="sun.io.unicode.encoding" value="UnicodeLittle"/>
-    <property name="sun.nio.PageAlignDirectMemory" value="false"/>
-    <property name="awt.toolkit" value="sun.awt.windows.WToolkit"/>
-    <property name="ibm.signalhandling.sigint" value="true"/>
-    <property name="user.home" value="C:\Users\Hp"/>
-    <property name="com.ibm.cpu.endian" value="little"/>
-    <property name="java.version.date" value="2021-04-20"/>
-    <property name="java.specification.vendor" value="Oracle Corporation"/>
-    <property name="ibm.signalhandling.sigchain" value="true"/>
-    <property name="library.jansi.path" value="C:/Users/Hp/.sdkman/candidates/maven/current/lib/jansi-native"/>
-    <property name="java.library.path" value="C:\Users\Hp\.sdkman\candidates\java\current\bin\default;C:\Users\Hp\.sdkman\candidates\java\current\bin;C:\Windows\system32;C:\Windows;C:\Users\Hp\.sdkman\candidates\maven\current\bin;C:\Users\Hp\.sdkman\candidates\java\current\bin;C:\Users\Hp\bin;C:\Program Files\Git\mingw64\bin;C:\Program Files\Git\usr\local\bin;C:\Program Files\Git\usr\bin;C:\Program Files\Git\usr\bin;C:\Program Files\Git\mingw64\bin;C:\Program Files\Git\usr\bin;C:\Users\Hp\bin;C:\ProgramData\Oracle\Java\javapath;C:\Program Files (x86)\Common Files\Oracle\Java\javapath;C:\Program Files\Broadcom\Broadcom 802.11 Network Adapter;C:\Windows\system32;C:\Windows;C:\Windows\System32\Wbem;C:\Windows\System32\WindowsPowerShell\v1.0;C:\Windows\System32\OpenSSH;C:\ffmpeg\bin;C:\Program Files\Java\jdk1.8.0_131\bin;C:\Program Files\CMake\bin;C:\Program Files (x86)\PuTTY;C:\Program Files (x86)\Windows Kits\8.1\Windows Performance Toolkit;C:\Program Files\Git\cmd;C:\Program Files (x86)\Gow\bin;C:\Program Files\nodejs;C:\ProgramData\chocolatey\bin;C:\Users\Hp\AppData\Local\Streamlink\bin;C:\Users\Hp\AppData\Local\Programs\Python\Python36\Scripts;C:\Users\Hp\AppData\Local\Programs\Python\Python36;C:\Users\Hp\AppData\Local\Microsoft\WindowsApps;C:\Users\Hp\AppData\Local\Programs\Microsoft VS Code\bin;C:\MinGW\bin;C:\Program Files\JetBrains\IntelliJ IDEA 2020.3.2\bin;C:\Users\Hp\AppData\Roaming\npm;C:\Program Files\Git\usr\bin\vendor_perl;C:\Program Files\Git\usr\bin\core_perl;."/>
-    <property name="java.vendor.url" value="https://adoptopenjdk.net/"/>
-    <property name="java.vm.vendor" value="Eclipse OpenJ9"/>
-    <property name="java.fullversion" value="16.0.1+9
-JRE 16 Windows 10 amd64-64-Bit Compressed References 20210421_24 (JIT enabled, AOT enabled)
-OpenJ9   - b4cc246d9
-OMR      - 162e6f729
-JCL      - cea22090ecf based on jdk-16.0.1+9"/>
-    <property name="maven.home" value="C:\Users\Hp\.sdkman\candidates\maven\current"/>
+    <property name="idea.version" value="2020.3.2"/>
     <property name="java.runtime.name" value="OpenJDK Runtime Environment"/>
-    <property name="sun.java.command" value="org.codehaus.plexus.classworlds.launcher.Launcher clean verify"/>
-    <property name="java.class.path" value="C:/Users/Hp/.sdkman/candidates/maven/current/boot/plexus-classworlds-2.6.0.jar"/>
+    <property name="java.vm.version" value="16.0.1+9-24"/>
+    <property name="sun.boot.library.path" value="C:\Users\Hp\.jdks\openjdk-16.0.1\bin"/>
+    <property name="maven.multiModuleProjectDirectory" value="C:\Users\Hp\Desktop\Beadandok\Java fejlesztes a gyakorlatban\epam-deik-java-dev\final"/>
+    <property name="java.vm.vendor" value="Oracle Corporation"/>
+    <property name="java.vendor.url" value="https://java.oracle.com/"/>
+    <property name="guice.disable.misplaced.annotation.check" value="true"/>
+    <property name="path.separator" value=";"/>
+    <property name="java.vm.name" value="OpenJDK 64-Bit Server VM"/>
+    <property name="sun.os.patch.level" value=""/>
+    <property name="user.script" value=""/>
+    <property name="user.country" value="HU"/>
+    <property name="sun.java.launcher" value="SUN_STANDARD"/>
     <property name="java.vm.specification.name" value="Java Virtual Machine Specification"/>
-    <property name="java.vm.specification.version" value="16"/>
-    <property name="sun.cpu.endian" value="little"/>
-    <property name="java.io.tmpdir" value="C:\Users\Hp\AppData\Local\Temp\"/>
-    <property name="java.vendor.url.bug" value="https://github.com/AdoptOpenJDK/openjdk-support/issues"/>
-    <property name="maven.multiModuleProjectDirectory" value="C:/Users/Hp/Desktop/Beadandok/Java fejlesztes a gyakorlatban/epam-deik-java-dev/final"/>
-    <property name="ibm.system.encoding" value="Cp1250"/>
-    <property name="os.arch" value="amd64"/>
-    <property name="java.awt.graphicsenv" value="sun.awt.Win32GraphicsEnvironment"/>
-    <property name="ibm.signalhandling.rs" value="false"/>
     <property name="user.dir" value="C:\Users\Hp\Desktop\Beadandok\Java fejlesztes a gyakorlatban\epam-deik-java-dev\final"/>
+    <property name="java.vm.compressedOopsMode" value="32-bit"/>
+    <property name="java.runtime.version" value="16.0.1+9-24"/>
+    <property name="os.arch" value="amd64"/>
+    <property name="java.io.tmpdir" value="C:\Users\Hp\AppData\Local\Temp\"/>
     <property name="line.separator" value="
 "/>
-    <property name="java.vm.name" value="Eclipse OpenJ9 VM"/>
-    <property name="com.ibm.oti.shared.enabled" value="false"/>
-    <property name="com.ibm.vm.bitmode" value="64"/>
-    <property name="file.encoding" value="Cp1250"/>
+    <property name="java.vm.specification.vendor" value="Oracle Corporation"/>
+    <property name="user.variant" value=""/>
+    <property name="os.name" value="Windows 10"/>
+    <property name="maven.ext.class.path" value="C:\Program Files\JetBrains\IntelliJ IDEA 2020.3.2\plugins\maven\lib\maven-event-listener.jar"/>
+    <property name="classworlds.conf" value="C:\Program Files\JetBrains\IntelliJ IDEA 2020.3.2\plugins\maven\lib\maven3\bin\m2.conf"/>
+    <property name="sun.jnu.encoding" value="Cp1250"/>
+    <property name="java.library.path" value="C:\Users\Hp\.jdks\openjdk-16.0.1\bin;C:\Windows\Sun\Java\bin;C:\Windows\system32;C:\Windows;C:\ProgramData\Oracle\Java\javapath;C:\Program Files (x86)\Common Files\Oracle\Java\javapath;C:\Program Files\Broadcom\Broadcom 802.11 Network Adapter;C:\Windows\system32;C:\Windows;C:\Windows\System32\Wbem;C:\Windows\System32\WindowsPowerShell\v1.0\;C:\Windows\System32\OpenSSH\;C:\ffmpeg\bin;C:\Program Files\Java\jdk1.8.0_131\bin;C:\Program Files\CMake\bin;C:\Program Files (x86)\PuTTY\;C:\Program Files (x86)\Windows Kits\8.1\Windows Performance Toolkit\;C:\Program Files\Git\cmd;C:\Program Files (x86)\Gow\bin;C:\Program Files\nodejs\;C:\ProgramData\chocolatey\bin;C:\Users\Hp\AppData\Local\Streamlink\bin;C:\Users\Hp\AppData\Local\Programs\Python\Python36\Scripts\;C:\Users\Hp\AppData\Local\Programs\Python\Python36\;C:\Users\Hp\AppData\Local\Microsoft\WindowsApps;C:\Users\Hp\AppData\Local\Programs\Microsoft VS Code\bin;C:\MinGW\bin;C:\Program Files\JetBrains\IntelliJ IDEA 2020.3.2\bin;;C:\Users\Hp\AppData\Roaming\npm;."/>
+    <property name="maven.conf" value="C:\Program Files\JetBrains\IntelliJ IDEA 2020.3.2\plugins\maven\lib\maven3/conf"/>
+    <property name="jdk.debug" value="release"/>
+    <property name="java.class.version" value="60.0"/>
+    <property name="java.specification.name" value="Java Platform API Specification"/>
+    <property name="sun.management.compiler" value="HotSpot 64-Bit Tiered Compilers"/>
+    <property name="os.version" value="10.0"/>
+    <property name="user.home" value="C:\Users\Hp"/>
+    <property name="user.timezone" value="Europe/Budapest"/>
+    <property name="file.encoding" value="UTF-8"/>
     <property name="java.specification.version" value="16"/>
-    <property name="com.ibm.oti.configuration" value="scar"/>
-    <property name="java.vendor.version" value="AdoptOpenJDK-16.0.1+9"/>
+    <property name="user.name" value="Hp"/>
+    <property name="java.class.path" value="C:\Program Files\JetBrains\IntelliJ IDEA 2020.3.2\plugins\maven\lib\maven3\boot\plexus-classworlds-2.6.0.jar;C:\Program Files\JetBrains\IntelliJ IDEA 2020.3.2\plugins\maven\lib\maven3\boot\plexus-classworlds.license"/>
+    <property name="java.vm.specification.version" value="16"/>
+    <property name="sun.arch.data.model" value="64"/>
+    <property name="sun.java.command" value="org.codehaus.classworlds.Launcher -Didea.version=2020.3.2 verify -P requirements-grade2"/>
+    <property name="java.home" value="C:\Users\Hp\.jdks\openjdk-16.0.1"/>
+    <property name="user.language" value="hu"/>
+    <property name="java.specification.vendor" value="Oracle Corporation"/>
+    <property name="java.vm.info" value="mixed mode, sharing"/>
+    <property name="java.version" value="16.0.1"/>
+    <property name="java.vendor" value="Oracle Corporation"/>
+    <property name="maven.home" value="C:\Program Files\JetBrains\IntelliJ IDEA 2020.3.2\plugins\maven\lib\maven3"/>
+    <property name="file.separator" value="\"/>
+    <property name="java.version.date" value="2021-04-20"/>
+    <property name="java.vendor.url.bug" value="https://bugreport.java.com/bugreport/"/>
+    <property name="sun.io.unicode.encoding" value="UnicodeLittle"/>
+    <property name="sun.cpu.endian" value="little"/>
+    <property name="sun.cpu.isalist" value="amd64"/>
   </properties>
-  <testcase classname="allow creating accounts and logging in" name="the admin account exists by default and can be logged in with the correct password" time="33.62">
-    <failure message="
-Expected: &quot;Signed in with privileged account &apos;admin&apos;&quot;
-     but: was &quot;&amp;#27;[31md&amp;#27;[0m&amp;#27;[31me&amp;#27;[0m&amp;#27;[31ms&amp;#27;[0m&amp;#27;[31mc&amp;#27;[0m&amp;#27;[31mr&amp;#27;[0m&amp;#27;[31mi&amp;#27;[0m&amp;#27;[31mb&amp;#27;[0m&amp;#27;[31me&amp;#27;[0m&amp;#27;[31m &amp;#27;[0m&amp;#27;[31ma&amp;#27;[0m&amp;#27;[31mc&amp;#27;[0m&amp;#27;[31mc&amp;#27;[0m&amp;#27;[31mo&amp;#27;[0m&amp;#27;[31mu&amp;#27;[0m&amp;#27;[31mn&amp;#27;[0m&amp;#27;[15D&amp;#27;[1mdescribe account&amp;#27;[0m&amp;#27;[KSigned in with privileged account &apos;admin&apos;&quot;" type="java.lang.AssertionError">java.lang.AssertionError: 
-Expected: &quot;Signed in with privileged account &apos;admin&apos;&quot;
-     but: was &quot;&amp;#27;[31md&amp;#27;[0m&amp;#27;[31me&amp;#27;[0m&amp;#27;[31ms&amp;#27;[0m&amp;#27;[31mc&amp;#27;[0m&amp;#27;[31mr&amp;#27;[0m&amp;#27;[31mi&amp;#27;[0m&amp;#27;[31mb&amp;#27;[0m&amp;#27;[31me&amp;#27;[0m&amp;#27;[31m &amp;#27;[0m&amp;#27;[31ma&amp;#27;[0m&amp;#27;[31mc&amp;#27;[0m&amp;#27;[31mc&amp;#27;[0m&amp;#27;[31mo&amp;#27;[0m&amp;#27;[31mu&amp;#27;[0m&amp;#27;[31mn&amp;#27;[0m&amp;#27;[15D&amp;#27;[1mdescribe account&amp;#27;[0m&amp;#27;[KSigned in with privileged account &apos;admin&apos;&quot;
-	at org.hamcrest.MatcherAssert.assertThat(MatcherAssert.java:20)
-	at org.hamcrest.MatcherAssert.assertThat(MatcherAssert.java:8)
-	at com.training.epam.ticketservice.at.GenericCliProcessStepDefs.theNextLineOfOutputContains(GenericCliProcessStepDefs.java:43)
-	at ✽.the next line of the output is &quot;Signed in with privileged account &apos;admin&apos;&quot;(file:///C:/Users/Hp/Desktop/Beadandok/Java%20fejlesztes%20a%20gyakorlatban/epam-deik-java-dev/final/ticket-service-acceptance-tests/src/test/resources/features/accounts.feature:11)
-</failure>
-    <system-err>SLF4J: Class path contains multiple SLF4J bindings.
-SLF4J: Found binding in [jar:file:/C:/Users/Hp/.m2/repository/ch/qos/logback/logback-classic/1.2.6/logback-classic-1.2.6.jar!/org/slf4j/impl/StaticLoggerBinder.class]
-SLF4J: Found binding in [jar:file:/C:/Users/Hp/.m2/repository/org/slf4j/slf4j-simple/1.7.30/slf4j-simple-1.7.30.jar!/org/slf4j/impl/StaticLoggerBinder.class]
-SLF4J: See http://www.slf4j.org/codes.html#multiple_bindings for an explanation.
-SLF4J: Actual binding is of type [ch.qos.logback.classic.util.ContextSelectorStaticBinder]
-</system-err>
-  </testcase>
-  <testcase classname="allow creating accounts and logging in" name="the admin account can be signed out" time="41.16">
-    <failure message="
-Expected: &quot;You are not signed in&quot;
-     but: was &quot;&amp;#27;[31md&amp;#27;[0m&amp;#27;[31me&amp;#27;[0m&amp;#27;[31ms&amp;#27;[0m&amp;#27;[31mc&amp;#27;[0m&amp;#27;[31mr&amp;#27;[0m&amp;#27;[31mi&amp;#27;[0m&amp;#27;[31mb&amp;#27;[0m&amp;#27;[31me&amp;#27;[0m&amp;#27;[31m &amp;#27;[0m&amp;#27;[31ma&amp;#27;[0m&amp;#27;[31mc&amp;#27;[0m&amp;#27;[31mc&amp;#27;[0m&amp;#27;[31mo&amp;#27;[0m&amp;#27;[31mu&amp;#27;[0m&amp;#27;[31mn&amp;#27;[0m&amp;#27;[15D&amp;#27;[1mdescribe account&amp;#27;[0m&amp;#27;[KYou are not signed in&quot;" type="java.lang.AssertionError">java.lang.AssertionError: 
-Expected: &quot;You are not signed in&quot;
-     but: was &quot;&amp;#27;[31md&amp;#27;[0m&amp;#27;[31me&amp;#27;[0m&amp;#27;[31ms&amp;#27;[0m&amp;#27;[31mc&amp;#27;[0m&amp;#27;[31mr&amp;#27;[0m&amp;#27;[31mi&amp;#27;[0m&amp;#27;[31mb&amp;#27;[0m&amp;#27;[31me&amp;#27;[0m&amp;#27;[31m &amp;#27;[0m&amp;#27;[31ma&amp;#27;[0m&amp;#27;[31mc&amp;#27;[0m&amp;#27;[31mc&amp;#27;[0m&amp;#27;[31mo&amp;#27;[0m&amp;#27;[31mu&amp;#27;[0m&amp;#27;[31mn&amp;#27;[0m&amp;#27;[15D&amp;#27;[1mdescribe account&amp;#27;[0m&amp;#27;[KYou are not signed in&quot;
-	at org.hamcrest.MatcherAssert.assertThat(MatcherAssert.java:20)
-	at org.hamcrest.MatcherAssert.assertThat(MatcherAssert.java:8)
-	at com.training.epam.ticketservice.at.GenericCliProcessStepDefs.theNextLineOfOutputContains(GenericCliProcessStepDefs.java:43)
-	at ✽.the next line of the output is &quot;You are not signed in&quot;(file:///C:/Users/Hp/Desktop/Beadandok/Java%20fejlesztes%20a%20gyakorlatban/epam-deik-java-dev/final/ticket-service-acceptance-tests/src/test/resources/features/accounts.feature:18)
-</failure>
-  </testcase>
-  <testcase classname="allow creating accounts and logging in" name="the admin account can not be logged in with incorrect password" time="20.1">
-    <failure message="
-Expected: &quot;Login failed due to incorrect credentials&quot;
-     but: was &quot;&amp;#27;[31ms&amp;#27;[0m&amp;#27;[31mi&amp;#27;[0m&amp;#27;[31mg&amp;#27;[0m&amp;#27;[31mn&amp;#27;[0m&amp;#27;[31m &amp;#27;[0m&amp;#27;[31mi&amp;#27;[0m&amp;#27;[31mn&amp;#27;[0m&amp;#27;[31m &amp;#27;[0m&amp;#27;[31mp&amp;#27;[0m&amp;#27;[31mr&amp;#27;[0m&amp;#27;[31mi&amp;#27;[0m&amp;#27;[31mv&amp;#27;[0m&amp;#27;[31mi&amp;#27;[0m&amp;#27;[31ml&amp;#27;[0m&amp;#27;[31me&amp;#27;[0m&amp;#27;[31mg&amp;#27;[0m&amp;#27;[31me&amp;#27;[0m&amp;#27;[17D&amp;#27;[1msign in privileged&amp;#27;[0m&amp;#27;[K admin asdQWE123Login failed due to incorrect credentials&quot;" type="java.lang.AssertionError">java.lang.AssertionError: 
-Expected: &quot;Login failed due to incorrect credentials&quot;
-     but: was &quot;&amp;#27;[31ms&amp;#27;[0m&amp;#27;[31mi&amp;#27;[0m&amp;#27;[31mg&amp;#27;[0m&amp;#27;[31mn&amp;#27;[0m&amp;#27;[31m &amp;#27;[0m&amp;#27;[31mi&amp;#27;[0m&amp;#27;[31mn&amp;#27;[0m&amp;#27;[31m &amp;#27;[0m&amp;#27;[31mp&amp;#27;[0m&amp;#27;[31mr&amp;#27;[0m&amp;#27;[31mi&amp;#27;[0m&amp;#27;[31mv&amp;#27;[0m&amp;#27;[31mi&amp;#27;[0m&amp;#27;[31ml&amp;#27;[0m&amp;#27;[31me&amp;#27;[0m&amp;#27;[31mg&amp;#27;[0m&amp;#27;[31me&amp;#27;[0m&amp;#27;[17D&amp;#27;[1msign in privileged&amp;#27;[0m&amp;#27;[K admin asdQWE123Login failed due to incorrect credentials&quot;
-	at org.hamcrest.MatcherAssert.assertThat(MatcherAssert.java:20)
-	at org.hamcrest.MatcherAssert.assertThat(MatcherAssert.java:8)
-	at com.training.epam.ticketservice.at.GenericCliProcessStepDefs.theNextLineOfOutputContains(GenericCliProcessStepDefs.java:43)
-	at ✽.the next line of the output is &quot;Login failed due to incorrect credentials&quot;(file:///C:/Users/Hp/Desktop/Beadandok/Java%20fejlesztes%20a%20gyakorlatban/epam-deik-java-dev/final/ticket-service-acceptance-tests/src/test/resources/features/accounts.feature:23)
-</failure>
-  </testcase>
-  <testcase classname="allows creating movie descriptions" name="an admin user can create and list movies" time="41.397">
-    <failure message="
-Expected: &quot;Sátántangó (drama, 450 minutes)&quot;
-     but: was &quot;&amp;#27;[31ml&amp;#27;[0m&amp;#27;[31mi&amp;#27;[0m&amp;#27;[31ms&amp;#27;[0m&amp;#27;[31mt&amp;#27;[0m&amp;#27;[31m &amp;#27;[0m&amp;#27;[31mm&amp;#27;[0m&amp;#27;[31mo&amp;#27;[0m&amp;#27;[31mv&amp;#27;[0m&amp;#27;[31mi&amp;#27;[0m&amp;#27;[31me&amp;#27;[0m&amp;#27;[10D&amp;#27;[1mlist movies&amp;#27;[0m&amp;#27;[KSátántangó (drama, 450 minutes)&quot;" type="java.lang.AssertionError">java.lang.AssertionError: 
-Expected: &quot;Sátántangó (drama, 450 minutes)&quot;
-     but: was &quot;&amp;#27;[31ml&amp;#27;[0m&amp;#27;[31mi&amp;#27;[0m&amp;#27;[31ms&amp;#27;[0m&amp;#27;[31mt&amp;#27;[0m&amp;#27;[31m &amp;#27;[0m&amp;#27;[31mm&amp;#27;[0m&amp;#27;[31mo&amp;#27;[0m&amp;#27;[31mv&amp;#27;[0m&amp;#27;[31mi&amp;#27;[0m&amp;#27;[31me&amp;#27;[0m&amp;#27;[10D&amp;#27;[1mlist movies&amp;#27;[0m&amp;#27;[KSátántangó (drama, 450 minutes)&quot;
-	at org.hamcrest.MatcherAssert.assertThat(MatcherAssert.java:20)
-	at org.hamcrest.MatcherAssert.assertThat(MatcherAssert.java:8)
-	at com.training.epam.ticketservice.at.GenericCliProcessStepDefs.theNextLineOfOutputContains(GenericCliProcessStepDefs.java:43)
-	at ✽.the next line of the output is &quot;Sátántangó (drama, 450 minutes)&quot;(file:///C:/Users/Hp/Desktop/Beadandok/Java%20fejlesztes%20a%20gyakorlatban/epam-deik-java-dev/final/ticket-service-acceptance-tests/src/test/resources/features/movies.feature:11)
-</failure>
-  </testcase>
-  <testcase classname="allows creating movie descriptions" name="an admin user can update a movie" time="50.089">
-    <failure message="
-Expected: &quot;Sátántangó (drama, 450 minutes)&quot;
-     but: was &quot;&amp;#27;[31ml&amp;#27;[0m&amp;#27;[31mi&amp;#27;[0m&amp;#27;[31ms&amp;#27;[0m&amp;#27;[31mt&amp;#27;[0m&amp;#27;[31m &amp;#27;[0m&amp;#27;[31mm&amp;#27;[0m&amp;#27;[31mo&amp;#27;[0m&amp;#27;[31mv&amp;#27;[0m&amp;#27;[31mi&amp;#27;[0m&amp;#27;[31me&amp;#27;[0m&amp;#27;[10D&amp;#27;[1mlist movies&amp;#27;[0m&amp;#27;[KSátántangó (drama, 450 minutes)&quot;" type="java.lang.AssertionError">java.lang.AssertionError: 
-Expected: &quot;Sátántangó (drama, 450 minutes)&quot;
-     but: was &quot;&amp;#27;[31ml&amp;#27;[0m&amp;#27;[31mi&amp;#27;[0m&amp;#27;[31ms&amp;#27;[0m&amp;#27;[31mt&amp;#27;[0m&amp;#27;[31m &amp;#27;[0m&amp;#27;[31mm&amp;#27;[0m&amp;#27;[31mo&amp;#27;[0m&amp;#27;[31mv&amp;#27;[0m&amp;#27;[31mi&amp;#27;[0m&amp;#27;[31me&amp;#27;[0m&amp;#27;[10D&amp;#27;[1mlist movies&amp;#27;[0m&amp;#27;[KSátántangó (drama, 450 minutes)&quot;
-	at org.hamcrest.MatcherAssert.assertThat(MatcherAssert.java:20)
-	at org.hamcrest.MatcherAssert.assertThat(MatcherAssert.java:8)
-	at com.training.epam.ticketservice.at.GenericCliProcessStepDefs.theNextLineOfOutputContains(GenericCliProcessStepDefs.java:43)
-	at ✽.the next line of the output is &quot;Sátántangó (drama, 450 minutes)&quot;(file:///C:/Users/Hp/Desktop/Beadandok/Java%20fejlesztes%20a%20gyakorlatban/epam-deik-java-dev/final/ticket-service-acceptance-tests/src/test/resources/features/movies.feature:19)
-</failure>
-  </testcase>
-  <testcase classname="allows creating movie descriptions" name="an admin user can delete a movie" time="50.838">
-    <failure message="
-Expected: &quot;There are no movies at the moment&quot;
-     but: was &quot;&amp;#27;[31ml&amp;#27;[0m&amp;#27;[31mi&amp;#27;[0m&amp;#27;[31ms&amp;#27;[0m&amp;#27;[31mt&amp;#27;[0m&amp;#27;[31m &amp;#27;[0m&amp;#27;[31mm&amp;#27;[0m&amp;#27;[31mo&amp;#27;[0m&amp;#27;[31mv&amp;#27;[0m&amp;#27;[31mi&amp;#27;[0m&amp;#27;[31me&amp;#27;[0m&amp;#27;[10D&amp;#27;[1mlist movies&amp;#27;[0m&amp;#27;[KThere are no movies at the moment&quot;" type="java.lang.AssertionError">java.lang.AssertionError: 
-Expected: &quot;There are no movies at the moment&quot;
-     but: was &quot;&amp;#27;[31ml&amp;#27;[0m&amp;#27;[31mi&amp;#27;[0m&amp;#27;[31ms&amp;#27;[0m&amp;#27;[31mt&amp;#27;[0m&amp;#27;[31m &amp;#27;[0m&amp;#27;[31mm&amp;#27;[0m&amp;#27;[31mo&amp;#27;[0m&amp;#27;[31mv&amp;#27;[0m&amp;#27;[31mi&amp;#27;[0m&amp;#27;[31me&amp;#27;[0m&amp;#27;[10D&amp;#27;[1mlist movies&amp;#27;[0m&amp;#27;[KThere are no movies at the moment&quot;
-	at org.hamcrest.MatcherAssert.assertThat(MatcherAssert.java:20)
-	at org.hamcrest.MatcherAssert.assertThat(MatcherAssert.java:8)
-	at com.training.epam.ticketservice.at.GenericCliProcessStepDefs.theNextLineOfOutputContains(GenericCliProcessStepDefs.java:43)
-	at ✽.the next line of the output is &quot;There are no movies at the moment&quot;(file:///C:/Users/Hp/Desktop/Beadandok/Java%20fejlesztes%20a%20gyakorlatban/epam-deik-java-dev/final/ticket-service-acceptance-tests/src/test/resources/features/movies.feature:27)
-</failure>
-  </testcase>
-  <testcase classname="allows creating movie descriptions" name="an unauthenticated user can list movies" time="50.089">
-    <failure message="
-Expected: &quot;Sátántangó (drama, 450 minutes)&quot;
-     but: was &quot;&amp;#27;[31ml&amp;#27;[0m&amp;#27;[31mi&amp;#27;[0m&amp;#27;[31ms&amp;#27;[0m&amp;#27;[31mt&amp;#27;[0m&amp;#27;[31m &amp;#27;[0m&amp;#27;[31mm&amp;#27;[0m&amp;#27;[31mo&amp;#27;[0m&amp;#27;[31mv&amp;#27;[0m&amp;#27;[31mi&amp;#27;[0m&amp;#27;[31me&amp;#27;[0m&amp;#27;[10D&amp;#27;[1mlist movies&amp;#27;[0m&amp;#27;[KSátántangó (drama, 450 minutes)&quot;" type="java.lang.AssertionError">java.lang.AssertionError: 
-Expected: &quot;Sátántangó (drama, 450 minutes)&quot;
-     but: was &quot;&amp;#27;[31ml&amp;#27;[0m&amp;#27;[31mi&amp;#27;[0m&amp;#27;[31ms&amp;#27;[0m&amp;#27;[31mt&amp;#27;[0m&amp;#27;[31m &amp;#27;[0m&amp;#27;[31mm&amp;#27;[0m&amp;#27;[31mo&amp;#27;[0m&amp;#27;[31mv&amp;#27;[0m&amp;#27;[31mi&amp;#27;[0m&amp;#27;[31me&amp;#27;[0m&amp;#27;[10D&amp;#27;[1mlist movies&amp;#27;[0m&amp;#27;[KSátántangó (drama, 450 minutes)&quot;
-	at org.hamcrest.MatcherAssert.assertThat(MatcherAssert.java:20)
-	at org.hamcrest.MatcherAssert.assertThat(MatcherAssert.java:8)
-	at com.training.epam.ticketservice.at.GenericCliProcessStepDefs.theNextLineOfOutputContains(GenericCliProcessStepDefs.java:43)
-	at ✽.the next line of the output is &quot;Sátántangó (drama, 450 minutes)&quot;(file:///C:/Users/Hp/Desktop/Beadandok/Java%20fejlesztes%20a%20gyakorlatban/epam-deik-java-dev/final/ticket-service-acceptance-tests/src/test/resources/features/movies.feature:35)
-</failure>
-  </testcase>
-  <testcase classname="allow creating, reading, updating and deleting rooms where the screenings will happen" name="an admin user can create and list rooms" time="42.452">
-    <failure message="
-Expected: &quot;Room Pedersoli with 200 seats, 20 rows and 10 columns&quot;
-     but: was &quot;&amp;#27;[31ml&amp;#27;[0m&amp;#27;[31mi&amp;#27;[0m&amp;#27;[31ms&amp;#27;[0m&amp;#27;[31mt&amp;#27;[0m&amp;#27;[31m &amp;#27;[0m&amp;#27;[31mr&amp;#27;[0m&amp;#27;[31mo&amp;#27;[0m&amp;#27;[31mo&amp;#27;[0m&amp;#27;[31mm&amp;#27;[0m&amp;#27;[9D&amp;#27;[1mlist rooms&amp;#27;[0m&amp;#27;[KRoom Pedersoli with 200 seats, 20 rows and 10 columns&quot;" type="java.lang.AssertionError">java.lang.AssertionError: 
-Expected: &quot;Room Pedersoli with 200 seats, 20 rows and 10 columns&quot;
-     but: was &quot;&amp;#27;[31ml&amp;#27;[0m&amp;#27;[31mi&amp;#27;[0m&amp;#27;[31ms&amp;#27;[0m&amp;#27;[31mt&amp;#27;[0m&amp;#27;[31m &amp;#27;[0m&amp;#27;[31mr&amp;#27;[0m&amp;#27;[31mo&amp;#27;[0m&amp;#27;[31mo&amp;#27;[0m&amp;#27;[31mm&amp;#27;[0m&amp;#27;[9D&amp;#27;[1mlist rooms&amp;#27;[0m&amp;#27;[KRoom Pedersoli with 200 seats, 20 rows and 10 columns&quot;
-	at org.hamcrest.MatcherAssert.assertThat(MatcherAssert.java:20)
-	at org.hamcrest.MatcherAssert.assertThat(MatcherAssert.java:8)
-	at com.training.epam.ticketservice.at.GenericCliProcessStepDefs.theNextLineOfOutputContains(GenericCliProcessStepDefs.java:43)
-	at ✽.the next line of the output is &quot;Room Pedersoli with 200 seats, 20 rows and 10 columns&quot;(file:///C:/Users/Hp/Desktop/Beadandok/Java%20fejlesztes%20a%20gyakorlatban/epam-deik-java-dev/final/ticket-service-acceptance-tests/src/test/resources/features/rooms.feature:12)
-</failure>
-  </testcase>
-  <testcase classname="allow creating, reading, updating and deleting rooms where the screenings will happen" name="an admin user can update a room" time="69.033">
-    <failure message="
-Expected: &quot;Room Pedersoli with 100 seats, 10 rows and 10 columns&quot;
-     but: was &quot;&amp;#27;[31ml&amp;#27;[0m&amp;#27;[31mi&amp;#27;[0m&amp;#27;[31ms&amp;#27;[0m&amp;#27;[31mt&amp;#27;[0m&amp;#27;[31m &amp;#27;[0m&amp;#27;[31mr&amp;#27;[0m&amp;#27;[31mo&amp;#27;[0m&amp;#27;[31mo&amp;#27;[0m&amp;#27;[31mm&amp;#27;[0m&amp;#27;[9D&amp;#27;[1mlist rooms&amp;#27;[0m&amp;#27;[KRoom Pedersoli with 100 seats, 10 rows and 10 columns&quot;" type="java.lang.AssertionError">java.lang.AssertionError: 
-Expected: &quot;Room Pedersoli with 100 seats, 10 rows and 10 columns&quot;
-     but: was &quot;&amp;#27;[31ml&amp;#27;[0m&amp;#27;[31mi&amp;#27;[0m&amp;#27;[31ms&amp;#27;[0m&amp;#27;[31mt&amp;#27;[0m&amp;#27;[31m &amp;#27;[0m&amp;#27;[31mr&amp;#27;[0m&amp;#27;[31mo&amp;#27;[0m&amp;#27;[31mo&amp;#27;[0m&amp;#27;[31mm&amp;#27;[0m&amp;#27;[9D&amp;#27;[1mlist rooms&amp;#27;[0m&amp;#27;[KRoom Pedersoli with 100 seats, 10 rows and 10 columns&quot;
-	at org.hamcrest.MatcherAssert.assertThat(MatcherAssert.java:20)
-	at org.hamcrest.MatcherAssert.assertThat(MatcherAssert.java:8)
-	at com.training.epam.ticketservice.at.GenericCliProcessStepDefs.theNextLineOfOutputContains(GenericCliProcessStepDefs.java:43)
-	at ✽.the next line of the output is &quot;Room Pedersoli with 100 seats, 10 rows and 10 columns&quot;(file:///C:/Users/Hp/Desktop/Beadandok/Java%20fejlesztes%20a%20gyakorlatban/epam-deik-java-dev/final/ticket-service-acceptance-tests/src/test/resources/features/rooms.feature:20)
-</failure>
-  </testcase>
-  <testcase classname="allow creating, reading, updating and deleting rooms where the screenings will happen" name="an admin user can delete a room" time="53.912">
-    <failure message="
-Expected: &quot;There are no rooms at the moment&quot;
-     but: was &quot;&amp;#27;[31ml&amp;#27;[0m&amp;#27;[31mi&amp;#27;[0m&amp;#27;[31ms&amp;#27;[0m&amp;#27;[31mt&amp;#27;[0m&amp;#27;[31m &amp;#27;[0m&amp;#27;[31mr&amp;#27;[0m&amp;#27;[31mo&amp;#27;[0m&amp;#27;[31mo&amp;#27;[0m&amp;#27;[31mm&amp;#27;[0m&amp;#27;[9D&amp;#27;[1mlist rooms&amp;#27;[0m&amp;#27;[KThere are no rooms at the moment&quot;" type="java.lang.AssertionError">java.lang.AssertionError: 
-Expected: &quot;There are no rooms at the moment&quot;
-     but: was &quot;&amp;#27;[31ml&amp;#27;[0m&amp;#27;[31mi&amp;#27;[0m&amp;#27;[31ms&amp;#27;[0m&amp;#27;[31mt&amp;#27;[0m&amp;#27;[31m &amp;#27;[0m&amp;#27;[31mr&amp;#27;[0m&amp;#27;[31mo&amp;#27;[0m&amp;#27;[31mo&amp;#27;[0m&amp;#27;[31mm&amp;#27;[0m&amp;#27;[9D&amp;#27;[1mlist rooms&amp;#27;[0m&amp;#27;[KThere are no rooms at the moment&quot;
-	at org.hamcrest.MatcherAssert.assertThat(MatcherAssert.java:20)
-	at org.hamcrest.MatcherAssert.assertThat(MatcherAssert.java:8)
-	at com.training.epam.ticketservice.at.GenericCliProcessStepDefs.theNextLineOfOutputContains(GenericCliProcessStepDefs.java:43)
-	at ✽.the next line of the output is &quot;There are no rooms at the moment&quot;(file:///C:/Users/Hp/Desktop/Beadandok/Java%20fejlesztes%20a%20gyakorlatban/epam-deik-java-dev/final/ticket-service-acceptance-tests/src/test/resources/features/rooms.feature:28)
-</failure>
-  </testcase>
-  <testcase classname="allow creating, reading, updating and deleting rooms where the screenings will happen" name="an unauthenticated user can list rooms" time="57.074">
-    <failure message="
-Expected: &quot;Room Pedersoli with 200 seats, 20 rows and 10 columns&quot;
-     but: was &quot;&amp;#27;[31ml&amp;#27;[0m&amp;#27;[31mi&amp;#27;[0m&amp;#27;[31ms&amp;#27;[0m&amp;#27;[31mt&amp;#27;[0m&amp;#27;[31m &amp;#27;[0m&amp;#27;[31mr&amp;#27;[0m&amp;#27;[31mo&amp;#27;[0m&amp;#27;[31mo&amp;#27;[0m&amp;#27;[31mm&amp;#27;[0m&amp;#27;[9D&amp;#27;[1mlist rooms&amp;#27;[0m&amp;#27;[KRoom Pedersoli with 200 seats, 20 rows and 10 columns&quot;" type="java.lang.AssertionError">java.lang.AssertionError: 
-Expected: &quot;Room Pedersoli with 200 seats, 20 rows and 10 columns&quot;
-     but: was &quot;&amp;#27;[31ml&amp;#27;[0m&amp;#27;[31mi&amp;#27;[0m&amp;#27;[31ms&amp;#27;[0m&amp;#27;[31mt&amp;#27;[0m&amp;#27;[31m &amp;#27;[0m&amp;#27;[31mr&amp;#27;[0m&amp;#27;[31mo&amp;#27;[0m&amp;#27;[31mo&amp;#27;[0m&amp;#27;[31mm&amp;#27;[0m&amp;#27;[9D&amp;#27;[1mlist rooms&amp;#27;[0m&amp;#27;[KRoom Pedersoli with 200 seats, 20 rows and 10 columns&quot;
-	at org.hamcrest.MatcherAssert.assertThat(MatcherAssert.java:20)
-	at org.hamcrest.MatcherAssert.assertThat(MatcherAssert.java:8)
-	at com.training.epam.ticketservice.at.GenericCliProcessStepDefs.theNextLineOfOutputContains(GenericCliProcessStepDefs.java:43)
-	at ✽.the next line of the output is &quot;Room Pedersoli with 200 seats, 20 rows and 10 columns&quot;(file:///C:/Users/Hp/Desktop/Beadandok/Java%20fejlesztes%20a%20gyakorlatban/epam-deik-java-dev/final/ticket-service-acceptance-tests/src/test/resources/features/rooms.feature:36)
-</failure>
-  </testcase>
-  <testcase classname="allows creating, deleting and listing screenings" name="The admin user can create and query screenings" time="110.131">
-    <failure message="
-Expected: &quot;Sátántangó (drama, 450 minutes), screened in room Pedersoli, at 2021-03-15 10:45&quot;
-     but: was &quot;&amp;#27;[31ml&amp;#27;[0m&amp;#27;[31mi&amp;#27;[0m&amp;#27;[31ms&amp;#27;[0m&amp;#27;[31mt&amp;#27;[0m&amp;#27;[31m &amp;#27;[0m&amp;#27;[31ms&amp;#27;[0m&amp;#27;[31mc&amp;#27;[0m&amp;#27;[31mr&amp;#27;[0m&amp;#27;[31me&amp;#27;[0m&amp;#27;[31me&amp;#27;[0m&amp;#27;[31mn&amp;#27;[0m&amp;#27;[31mi&amp;#27;[0m&amp;#27;[31mn&amp;#27;[0m&amp;#27;[31mg&amp;#27;[0m&amp;#27;[14D&amp;#27;[1mlist screenings&amp;#27;[0m&amp;#27;[KThere are no screenings&quot;" type="java.lang.AssertionError">java.lang.AssertionError: 
-Expected: &quot;Sátántangó (drama, 450 minutes), screened in room Pedersoli, at 2021-03-15 10:45&quot;
-     but: was &quot;&amp;#27;[31ml&amp;#27;[0m&amp;#27;[31mi&amp;#27;[0m&amp;#27;[31ms&amp;#27;[0m&amp;#27;[31mt&amp;#27;[0m&amp;#27;[31m &amp;#27;[0m&amp;#27;[31ms&amp;#27;[0m&amp;#27;[31mc&amp;#27;[0m&amp;#27;[31mr&amp;#27;[0m&amp;#27;[31me&amp;#27;[0m&amp;#27;[31me&amp;#27;[0m&amp;#27;[31mn&amp;#27;[0m&amp;#27;[31mi&amp;#27;[0m&amp;#27;[31mn&amp;#27;[0m&amp;#27;[31mg&amp;#27;[0m&amp;#27;[14D&amp;#27;[1mlist screenings&amp;#27;[0m&amp;#27;[KThere are no screenings&quot;
-	at org.hamcrest.MatcherAssert.assertThat(MatcherAssert.java:20)
-	at org.hamcrest.MatcherAssert.assertThat(MatcherAssert.java:8)
-	at com.training.epam.ticketservice.at.GenericCliProcessStepDefs.theNextLineOfOutputContains(GenericCliProcessStepDefs.java:43)
-	at ✽.the next line of the output is &quot;Sátántangó (drama, 450 minutes), screened in room Pedersoli, at 2021-03-15 10:45&quot;(file:///C:/Users/Hp/Desktop/Beadandok/Java%20fejlesztes%20a%20gyakorlatban/epam-deik-java-dev/final/ticket-service-acceptance-tests/src/test/resources/features/screenings.feature:18)
-</failure>
-  </testcase>
-  <testcase classname="allows creating, deleting and listing screenings" name="The admin can not create overlapping screenings in the same room" time="116.634">
-    <failure message="
-Expected: &quot;There is an overlapping screening&quot;
-     but: was &quot;&amp;#27;[31mc&amp;#27;[0m&amp;#27;[31mr&amp;#27;[0m&amp;#27;[31me&amp;#27;[0m&amp;#27;[31ma&amp;#27;[0m&amp;#27;[31mt&amp;#27;[0m&amp;#27;[31me&amp;#27;[0m&amp;#27;[31m &amp;#27;[0m&amp;#27;[31ms&amp;#27;[0m&amp;#27;[31mc&amp;#27;[0m&amp;#27;[31mr&amp;#27;[0m&amp;#27;[31me&amp;#27;[0m&amp;#27;[31me&amp;#27;[0m&amp;#27;[31mn&amp;#27;[0m&amp;#27;[31mi&amp;#27;[0m&amp;#27;[31mn&amp;#27;[0m&amp;#27;[15D&amp;#27;[1mcreate screening&amp;#27;[0m&amp;#27;[K \&quot;Spirited Away\&quot; Pedersoli \&quot;2021-03-15 10:50\&quot;&amp;#27;[31mText &apos;2021-03-15 10:50&apos; could not be parsed: Unable to obtain LocalDateTime from TemporalAccessor: {MonthOfYear=3, HourOfAmPm=10, WeekBasedYear[WeekFields[MONDAY,4]]=2021, MinuteOfHour=50, DayOfYear=15},ISO of type java.time.format.Parsed&amp;#27;[0m&quot;" type="java.lang.AssertionError">java.lang.AssertionError: 
-Expected: &quot;There is an overlapping screening&quot;
-     but: was &quot;&amp;#27;[31mc&amp;#27;[0m&amp;#27;[31mr&amp;#27;[0m&amp;#27;[31me&amp;#27;[0m&amp;#27;[31ma&amp;#27;[0m&amp;#27;[31mt&amp;#27;[0m&amp;#27;[31me&amp;#27;[0m&amp;#27;[31m &amp;#27;[0m&amp;#27;[31ms&amp;#27;[0m&amp;#27;[31mc&amp;#27;[0m&amp;#27;[31mr&amp;#27;[0m&amp;#27;[31me&amp;#27;[0m&amp;#27;[31me&amp;#27;[0m&amp;#27;[31mn&amp;#27;[0m&amp;#27;[31mi&amp;#27;[0m&amp;#27;[31mn&amp;#27;[0m&amp;#27;[15D&amp;#27;[1mcreate screening&amp;#27;[0m&amp;#27;[K \&quot;Spirited Away\&quot; Pedersoli \&quot;2021-03-15 10:50\&quot;&amp;#27;[31mText &apos;2021-03-15 10:50&apos; could not be parsed: Unable to obtain LocalDateTime from TemporalAccessor: {MonthOfYear=3, HourOfAmPm=10, WeekBasedYear[WeekFields[MONDAY,4]]=2021, MinuteOfHour=50, DayOfYear=15},ISO of type java.time.format.Parsed&amp;#27;[0m&quot;
-	at org.hamcrest.MatcherAssert.assertThat(MatcherAssert.java:20)
-	at org.hamcrest.MatcherAssert.assertThat(MatcherAssert.java:8)
-	at com.training.epam.ticketservice.at.GenericCliProcessStepDefs.theNextLineOfOutputContains(GenericCliProcessStepDefs.java:43)
-	at ✽.the next line of the output is &quot;There is an overlapping screening&quot;(file:///C:/Users/Hp/Desktop/Beadandok/Java%20fejlesztes%20a%20gyakorlatban/epam-deik-java-dev/final/ticket-service-acceptance-tests/src/test/resources/features/screenings.feature:26)
-</failure>
-  </testcase>
-  <testcase classname="allows creating, deleting and listing screenings" name="The admin can create overlapping screenings in different rooms" time="109.04">
-    <failure message="
-Expected: &quot;Sátántangó (drama, 450 minutes), screened in room Pedersoli, at 2021-03-15 10:45&quot;
-     but: was &quot;&amp;#27;[31ml&amp;#27;[0m&amp;#27;[31mi&amp;#27;[0m&amp;#27;[31ms&amp;#27;[0m&amp;#27;[31mt&amp;#27;[0m&amp;#27;[31m &amp;#27;[0m&amp;#27;[31ms&amp;#27;[0m&amp;#27;[31mc&amp;#27;[0m&amp;#27;[31mr&amp;#27;[0m&amp;#27;[31me&amp;#27;[0m&amp;#27;[31me&amp;#27;[0m&amp;#27;[31mn&amp;#27;[0m&amp;#27;[31mi&amp;#27;[0m&amp;#27;[31mn&amp;#27;[0m&amp;#27;[31mg&amp;#27;[0m&amp;#27;[14D&amp;#27;[1mlist screenings&amp;#27;[0m&amp;#27;[KThere are no screenings&quot;" type="java.lang.AssertionError">java.lang.AssertionError: 
-Expected: &quot;Sátántangó (drama, 450 minutes), screened in room Pedersoli, at 2021-03-15 10:45&quot;
-     but: was &quot;&amp;#27;[31ml&amp;#27;[0m&amp;#27;[31mi&amp;#27;[0m&amp;#27;[31ms&amp;#27;[0m&amp;#27;[31mt&amp;#27;[0m&amp;#27;[31m &amp;#27;[0m&amp;#27;[31ms&amp;#27;[0m&amp;#27;[31mc&amp;#27;[0m&amp;#27;[31mr&amp;#27;[0m&amp;#27;[31me&amp;#27;[0m&amp;#27;[31me&amp;#27;[0m&amp;#27;[31mn&amp;#27;[0m&amp;#27;[31mi&amp;#27;[0m&amp;#27;[31mn&amp;#27;[0m&amp;#27;[31mg&amp;#27;[0m&amp;#27;[14D&amp;#27;[1mlist screenings&amp;#27;[0m&amp;#27;[KThere are no screenings&quot;
-	at org.hamcrest.MatcherAssert.assertThat(MatcherAssert.java:20)
-	at org.hamcrest.MatcherAssert.assertThat(MatcherAssert.java:8)
-	at com.training.epam.ticketservice.at.GenericCliProcessStepDefs.theNextLineOfOutputContains(GenericCliProcessStepDefs.java:43)
-	at ✽.the next line of the output is &quot;Sátántangó (drama, 450 minutes), screened in room Pedersoli, at 2021-03-15 10:45&quot;(file:///C:/Users/Hp/Desktop/Beadandok/Java%20fejlesztes%20a%20gyakorlatban/epam-deik-java-dev/final/ticket-service-acceptance-tests/src/test/resources/features/screenings.feature:36)
-</failure>
-  </testcase>
-  <testcase classname="allows creating, deleting and listing screenings" name="The admin can not create screenings during a 10 minute long breaks after another screening in the same room" time="99.18">
-    <failure message="
-Expected: &quot;This would start in the break period after another screening in this room&quot;
-     but: was &quot;&amp;#27;[31mc&amp;#27;[0m&amp;#27;[31mr&amp;#27;[0m&amp;#27;[31me&amp;#27;[0m&amp;#27;[31ma&amp;#27;[0m&amp;#27;[31mt&amp;#27;[0m&amp;#27;[31me&amp;#27;[0m&amp;#27;[31m &amp;#27;[0m&amp;#27;[31ms&amp;#27;[0m&amp;#27;[31mc&amp;#27;[0m&amp;#27;[31mr&amp;#27;[0m&amp;#27;[31me&amp;#27;[0m&amp;#27;[31me&amp;#27;[0m&amp;#27;[31mn&amp;#27;[0m&amp;#27;[31mi&amp;#27;[0m&amp;#27;[31mn&amp;#27;[0m&amp;#27;[15D&amp;#27;[1mcreate screening&amp;#27;[0m&amp;#27;[K \&quot;Spirited Away\&quot; Pedersoli \&quot;2021-03-15 18:39\&quot;&amp;#27;[31mText &apos;2021-03-15 18:39&apos; could not be parsed: Invalid value for ClockHourOfAmPm (valid values 1 - 12): 18&amp;#27;[0m&quot;" type="java.lang.AssertionError">java.lang.AssertionError: 
-Expected: &quot;This would start in the break period after another screening in this room&quot;
-     but: was &quot;&amp;#27;[31mc&amp;#27;[0m&amp;#27;[31mr&amp;#27;[0m&amp;#27;[31me&amp;#27;[0m&amp;#27;[31ma&amp;#27;[0m&amp;#27;[31mt&amp;#27;[0m&amp;#27;[31me&amp;#27;[0m&amp;#27;[31m &amp;#27;[0m&amp;#27;[31ms&amp;#27;[0m&amp;#27;[31mc&amp;#27;[0m&amp;#27;[31mr&amp;#27;[0m&amp;#27;[31me&amp;#27;[0m&amp;#27;[31me&amp;#27;[0m&amp;#27;[31mn&amp;#27;[0m&amp;#27;[31mi&amp;#27;[0m&amp;#27;[31mn&amp;#27;[0m&amp;#27;[15D&amp;#27;[1mcreate screening&amp;#27;[0m&amp;#27;[K \&quot;Spirited Away\&quot; Pedersoli \&quot;2021-03-15 18:39\&quot;&amp;#27;[31mText &apos;2021-03-15 18:39&apos; could not be parsed: Invalid value for ClockHourOfAmPm (valid values 1 - 12): 18&amp;#27;[0m&quot;
-	at org.hamcrest.MatcherAssert.assertThat(MatcherAssert.java:20)
-	at org.hamcrest.MatcherAssert.assertThat(MatcherAssert.java:8)
-	at com.training.epam.ticketservice.at.GenericCliProcessStepDefs.theNextLineOfOutputContains(GenericCliProcessStepDefs.java:43)
-	at ✽.the next line of the output is &quot;This would start in the break period after another screening in this room&quot;(file:///C:/Users/Hp/Desktop/Beadandok/Java%20fejlesztes%20a%20gyakorlatban/epam-deik-java-dev/final/ticket-service-acceptance-tests/src/test/resources/features/screenings.feature:44)
-</failure>
-  </testcase>
-  <testcase classname="allows creating, deleting and listing screenings" name="The admin can create screenings even if there is a break after a screening in a different room" time="108.935">
-    <failure message="
-Expected: &quot;Sátántangó (drama, 450 minutes), screened in room Pedersoli, at 2021-03-15 11:00&quot;
-     but: was &quot;&amp;#27;[31ml&amp;#27;[0m&amp;#27;[31mi&amp;#27;[0m&amp;#27;[31ms&amp;#27;[0m&amp;#27;[31mt&amp;#27;[0m&amp;#27;[31m &amp;#27;[0m&amp;#27;[31ms&amp;#27;[0m&amp;#27;[31mc&amp;#27;[0m&amp;#27;[31mr&amp;#27;[0m&amp;#27;[31me&amp;#27;[0m&amp;#27;[31me&amp;#27;[0m&amp;#27;[31mn&amp;#27;[0m&amp;#27;[31mi&amp;#27;[0m&amp;#27;[31mn&amp;#27;[0m&amp;#27;[31mg&amp;#27;[0m&amp;#27;[14D&amp;#27;[1mlist screenings&amp;#27;[0m&amp;#27;[KThere are no screenings&quot;" type="java.lang.AssertionError">java.lang.AssertionError: 
-Expected: &quot;Sátántangó (drama, 450 minutes), screened in room Pedersoli, at 2021-03-15 11:00&quot;
-     but: was &quot;&amp;#27;[31ml&amp;#27;[0m&amp;#27;[31mi&amp;#27;[0m&amp;#27;[31ms&amp;#27;[0m&amp;#27;[31mt&amp;#27;[0m&amp;#27;[31m &amp;#27;[0m&amp;#27;[31ms&amp;#27;[0m&amp;#27;[31mc&amp;#27;[0m&amp;#27;[31mr&amp;#27;[0m&amp;#27;[31me&amp;#27;[0m&amp;#27;[31me&amp;#27;[0m&amp;#27;[31mn&amp;#27;[0m&amp;#27;[31mi&amp;#27;[0m&amp;#27;[31mn&amp;#27;[0m&amp;#27;[31mg&amp;#27;[0m&amp;#27;[14D&amp;#27;[1mlist screenings&amp;#27;[0m&amp;#27;[KThere are no screenings&quot;
-	at org.hamcrest.MatcherAssert.assertThat(MatcherAssert.java:20)
-	at org.hamcrest.MatcherAssert.assertThat(MatcherAssert.java:8)
-	at com.training.epam.ticketservice.at.GenericCliProcessStepDefs.theNextLineOfOutputContains(GenericCliProcessStepDefs.java:43)
-	at ✽.the next line of the output is &quot;Sátántangó (drama, 450 minutes), screened in room Pedersoli, at 2021-03-15 11:00&quot;(file:///C:/Users/Hp/Desktop/Beadandok/Java%20fejlesztes%20a%20gyakorlatban/epam-deik-java-dev/final/ticket-service-acceptance-tests/src/test/resources/features/screenings.feature:54)
-</failure>
-  </testcase>
-  <testcase classname="allows creating, deleting and listing screenings" name="The admin user can delete screenings" time="113.682">
-    <failure message="
-Expected: &quot;There are no screenings&quot;
-     but: was &quot;&amp;#27;[31ml&amp;#27;[0m&amp;#27;[31mi&amp;#27;[0m&amp;#27;[31ms&amp;#27;[0m&amp;#27;[31mt&amp;#27;[0m&amp;#27;[31m &amp;#27;[0m&amp;#27;[31ms&amp;#27;[0m&amp;#27;[31mc&amp;#27;[0m&amp;#27;[31mr&amp;#27;[0m&amp;#27;[31me&amp;#27;[0m&amp;#27;[31me&amp;#27;[0m&amp;#27;[31mn&amp;#27;[0m&amp;#27;[31mi&amp;#27;[0m&amp;#27;[31mn&amp;#27;[0m&amp;#27;[31mg&amp;#27;[0m&amp;#27;[14D&amp;#27;[1mlist screenings&amp;#27;[0m&amp;#27;[KThere are no screenings&quot;" type="java.lang.AssertionError">java.lang.AssertionError: 
-Expected: &quot;There are no screenings&quot;
-     but: was &quot;&amp;#27;[31ml&amp;#27;[0m&amp;#27;[31mi&amp;#27;[0m&amp;#27;[31ms&amp;#27;[0m&amp;#27;[31mt&amp;#27;[0m&amp;#27;[31m &amp;#27;[0m&amp;#27;[31ms&amp;#27;[0m&amp;#27;[31mc&amp;#27;[0m&amp;#27;[31mr&amp;#27;[0m&amp;#27;[31me&amp;#27;[0m&amp;#27;[31me&amp;#27;[0m&amp;#27;[31mn&amp;#27;[0m&amp;#27;[31mi&amp;#27;[0m&amp;#27;[31mn&amp;#27;[0m&amp;#27;[31mg&amp;#27;[0m&amp;#27;[14D&amp;#27;[1mlist screenings&amp;#27;[0m&amp;#27;[KThere are no screenings&quot;
-	at org.hamcrest.MatcherAssert.assertThat(MatcherAssert.java:20)
-	at org.hamcrest.MatcherAssert.assertThat(MatcherAssert.java:8)
-	at com.training.epam.ticketservice.at.GenericCliProcessStepDefs.theNextLineOfOutputContains(GenericCliProcessStepDefs.java:43)
-	at ✽.the next line of the output is &quot;There are no screenings&quot;(file:///C:/Users/Hp/Desktop/Beadandok/Java%20fejlesztes%20a%20gyakorlatban/epam-deik-java-dev/final/ticket-service-acceptance-tests/src/test/resources/features/screenings.feature:63)
-</failure>
-  </testcase>
+  <testcase classname="allow creating accounts and logging in" name="the admin account exists by default and can be logged in with the correct password" time="35.575"/>
+  <testcase classname="allow creating accounts and logging in" name="the admin account can be signed out" time="35.079"/>
+  <testcase classname="allow creating accounts and logging in" name="the admin account can not be logged in with incorrect password" time="33.853"/>
+  <testcase classname="allows creating movie descriptions" name="an admin user can create and list movies" time="34.19"/>
+  <testcase classname="allows creating movie descriptions" name="an admin user can update a movie" time="34.729"/>
+  <testcase classname="allows creating movie descriptions" name="an admin user can delete a movie" time="33.627"/>
+  <testcase classname="allows creating movie descriptions" name="an unauthenticated user can list movies" time="34.937"/>
+  <testcase classname="allow creating, reading, updating and deleting rooms where the screenings will happen" name="an admin user can create and list rooms" time="34.265"/>
+  <testcase classname="allow creating, reading, updating and deleting rooms where the screenings will happen" name="an admin user can update a room" time="33.731"/>
+  <testcase classname="allow creating, reading, updating and deleting rooms where the screenings will happen" name="an admin user can delete a room" time="34.833"/>
+  <testcase classname="allow creating, reading, updating and deleting rooms where the screenings will happen" name="an unauthenticated user can list rooms" time="35.723"/>
+  <testcase classname="allows creating, deleting and listing screenings" name="The admin user can create and query screenings" time="41.177"/>
+  <testcase classname="allows creating, deleting and listing screenings" name="The admin can not create overlapping screenings in the same room" time="39.993"/>
+  <testcase classname="allows creating, deleting and listing screenings" name="The admin can create overlapping screenings in different rooms" time="40.599"/>
+  <testcase classname="allows creating, deleting and listing screenings" name="The admin can not create screenings during a 10 minute long breaks after another screening in the same room" time="41.636"/>
+  <testcase classname="allows creating, deleting and listing screenings" name="The admin can create screenings even if there is a break after a screening in a different room" time="44.608"/>
+  <testcase classname="allows creating, deleting and listing screenings" name="The admin user can delete screenings" time="47.724"/>
 </testsuite>
