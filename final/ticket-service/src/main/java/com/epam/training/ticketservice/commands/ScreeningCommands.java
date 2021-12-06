@@ -1,9 +1,9 @@
 package com.epam.training.ticketservice.commands;
 
+import com.epam.training.ticketservice.commands.availability.CommandAvailability;
 import com.epam.training.ticketservice.core.movie.Movie;
 import com.epam.training.ticketservice.core.room.Room;
 import com.epam.training.ticketservice.core.screening.Screening;
-import com.epam.training.ticketservice.core.user.User;
 import com.epam.training.ticketservice.services.AccountService;
 import com.epam.training.ticketservice.services.MovieService;
 import com.epam.training.ticketservice.services.RoomService;
@@ -16,7 +16,6 @@ import org.springframework.shell.standard.ShellMethodAvailability;
 import java.time.LocalDateTime;
 import java.time.format.DateTimeFormatter;
 import java.util.List;
-import java.util.Optional;
 
 @ShellComponent
 public class ScreeningCommands {
@@ -58,25 +57,27 @@ public class ScreeningCommands {
         if (screenings.isEmpty()) {
             return "There are no screenings";
         }
-        String returnString = "";
+        StringBuilder stringBuilder = new StringBuilder();
         for (Screening s : screenings) {
             Movie m = s.getMovie();
             Room r = s.getRoom();
-            String lineToAdd = m.getName() + " (" + m.getGenre() + ", " + m.getMinutes()
-                    + " minutes), screened in room " + r.getName() + ", at "
-                    + s.getDateTime().format(DateTimeFormatter.ofPattern("yyyy-MM-dd HH:mm")) + System.lineSeparator();
-            returnString += lineToAdd;
+            stringBuilder.append(m.getName())
+                    .append(" (")
+                    .append(m.getGenre())
+                    .append(", ")
+                    .append(m.getMinutes())
+                    .append(" minutes), screened in room ")
+                    .append(r.getName())
+                    .append(", at ")
+                    .append(s.getDateTime().format(DateTimeFormatter.ofPattern("yyyy-MM-dd HH:mm")))
+                    .append(System.lineSeparator());
         }
-        return returnString;
+        return stringBuilder.toString();
 
     }
 
     private Availability userIsAdmin() {
-        Optional<User> optional = accountService.getCurrentUser();
-        if (optional.isPresent() && optional.get().getRole().equals(User.Role.ADMIN)) {
-            return Availability.available();
-        }
-        return Availability.unavailable("You must be an admin for this command.");
+        return CommandAvailability.userIsAdmin(accountService.getCurrentUser());
     }
 
 }

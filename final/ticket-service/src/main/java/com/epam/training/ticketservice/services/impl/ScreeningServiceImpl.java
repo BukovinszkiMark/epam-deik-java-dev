@@ -7,12 +7,9 @@ import com.epam.training.ticketservice.core.screening.ScreeningRepository;
 import com.epam.training.ticketservice.services.ScreeningService;
 import org.springframework.stereotype.Service;
 
-import javax.annotation.PostConstruct;
 import java.time.LocalDateTime;
-import java.util.ArrayList;
 import java.util.List;
 import java.util.Optional;
-import java.util.stream.Collectors;
 
 @Service
 public class ScreeningServiceImpl implements ScreeningService {

@@ -1,7 +1,7 @@
 package com.epam.training.ticketservice.commands;
 
+import com.epam.training.ticketservice.commands.availability.CommandAvailability;
 import com.epam.training.ticketservice.core.room.Room;
-import com.epam.training.ticketservice.core.user.User;
 import com.epam.training.ticketservice.services.AccountService;
 import com.epam.training.ticketservice.services.RoomService;
 import org.springframework.shell.Availability;
@@ -10,7 +10,6 @@ import org.springframework.shell.standard.ShellMethod;
 import org.springframework.shell.standard.ShellMethodAvailability;
 
 import java.util.List;
-import java.util.Optional;
 
 @ShellComponent
 public class RoomCommands {
@@ -42,26 +41,29 @@ public class RoomCommands {
     }
 
     @ShellMethod(key = "list rooms", value = "List existing rooms.")
-    public String listRoom() {
+    public String listRooms() {
         List<Room> rooms = roomService.getRoomList();
         if (rooms.isEmpty()) {
             return "There are no rooms at the moment";
         }
-        String returnString = "";
+        StringBuilder stringBuilder = new StringBuilder();
         for (Room r : rooms) {
-            String lineToAdd = "Room " + r.getName() + " with " + (r.getRows() * r.getColumns()) + " seats, "
-                    + r.getRows() + " rows and " + r.getColumns() + " columns" + System.lineSeparator();
-            returnString += lineToAdd;
+            stringBuilder.append("Room ")
+                    .append(r.getName())
+                    .append(" with ")
+                    .append(r.getRows() * r.getColumns())
+                    .append(" seats, ")
+                    .append(r.getRows())
+                    .append(" rows and ")
+                    .append(r.getColumns())
+                    .append(" columns")
+                    .append(System.lineSeparator());
         }
-        return returnString;
+        return stringBuilder.toString();
     }
 
     private Availability userIsAdmin() {
-        Optional<User> optional = accountService.getCurrentUser();
-        if (optional.isPresent() && optional.get().getRole().equals(User.Role.ADMIN)) {
-            return Availability.available();
-        }
-        return Availability.unavailable("You must be an admin for this command.");
+        return CommandAvailability.userIsAdmin(accountService.getCurrentUser());
     }
 
 }

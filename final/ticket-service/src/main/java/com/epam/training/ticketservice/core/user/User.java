@@ -1,5 +1,9 @@
 package com.epam.training.ticketservice.core.user;
 
+import lombok.EqualsAndHashCode;
+import lombok.Getter;
+import lombok.NoArgsConstructor;
+
 import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.EnumType;
@@ -9,6 +13,9 @@ import javax.persistence.GenerationType;
 import javax.persistence.Id;
 
 @Entity
+@NoArgsConstructor
+@Getter
+@EqualsAndHashCode
 public class User {
 
     @Id
@@ -26,25 +33,10 @@ public class User {
         this.role = role;
     }
 
-    public User() {
-
-    }
-
     public enum Role {
         USER,
         ADMIN
     }
 
-    public String getUsername() {
-        return username;
-    }
-
-    public String getPassword() {
-        return password;
-    }
-
-    public Role getRole() {
-        return role;
-    }
 }
 

@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="UTF-8"?><!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd"><html xmlns="http://www.w3.org/1999/xhtml" lang="hu"><head><meta http-equiv="Content-Type" content="text/html;charset=UTF-8"/><link rel="stylesheet" href="../jacoco-resources/report.css" type="text/css"/><link rel="shortcut icon" href="../jacoco-resources/report.gif" type="image/gif"/><title>ScreeningServiceImpl.java</title><link rel="stylesheet" href="../jacoco-resources/prettify.css" type="text/css"/><script type="text/javascript" src="../jacoco-resources/prettify.js"></script></head><body onload="window['PR_TAB_WIDTH']=4;prettyPrint()"><div class="breadcrumb" id="breadcrumb"><span class="info"><a href="../jacoco-sessions.html" class="el_session">Sessions</a></span><a href="../index.html" class="el_report">ticket-service</a> &gt; <a href="index.source.html" class="el_package">com.epam.training.ticketservice.services.impl</a> &gt; <span class="el_source">ScreeningServiceImpl.java</span></div><h1>ScreeningServiceImpl.java</h1><pre class="source lang-java linenums">package com.epam.training.ticketservice.services.impl;
+
+import com.epam.training.ticketservice.core.movie.Movie;
+import com.epam.training.ticketservice.core.room.Room;
+import com.epam.training.ticketservice.core.screening.Screening;
+import com.epam.training.ticketservice.core.screening.ScreeningRepository;
+import com.epam.training.ticketservice.services.ScreeningService;
+import org.springframework.stereotype.Service;
+
+import java.time.LocalDateTime;
+import java.util.List;
+import java.util.Optional;
+
+@Service
+public class ScreeningServiceImpl implements ScreeningService {
+
+    private ScreeningRepository screeningRepository;
+
+<span class="fc" id="L19">    public ScreeningServiceImpl(ScreeningRepository screeningRepository) {</span>
+<span class="fc" id="L20">        this.screeningRepository = screeningRepository;</span>
+<span class="fc" id="L21">    }</span>
+
+    @Override
+    public String createScreening(Movie movie, Room room, LocalDateTime dateTime) {
+<span class="fc bfc" id="L25" title="All 2 branches covered.">        if (isOverlappingAnotherScreening(movie,room, dateTime)) {</span>
+<span class="fc" id="L26">            return &quot;There is an overlapping screening&quot;;</span>
+        }
+<span class="fc bfc" id="L28" title="All 2 branches covered.">        if (isOverlappingAnotherScreeningsBreakTime(movie,room, dateTime)) {</span>
+<span class="fc" id="L29">            return &quot;This would start in the break period after another screening in this room&quot;;</span>
+        }
+<span class="pc bpc" id="L31" title="2 of 4 branches missed.">        if (movie != null &amp;&amp; room != null) {</span>
+<span class="fc" id="L32">            screeningRepository.save(new Screening(movie, room, dateTime));</span>
+        }
+<span class="fc" id="L34">        return null;</span>
+    }
+
+    private boolean isOverlappingAnotherScreening(Movie movie, Room room, LocalDateTime dateTime) {
+<span class="fc bfc" id="L38" title="All 2 branches covered.">        for (Screening s : screeningRepository.findAll()) {</span>
+<span class="pc bpc" id="L39" title="1 of 2 branches missed.">            if (s.getRoom().equals(room)) {</span>
+<span class="fc" id="L40">                LocalDateTime start = s.getDateTime();</span>
+<span class="fc" id="L41">                LocalDateTime end = start.plusMinutes(s.getMovie().getMinutes());</span>
+<span class="fc bfc" id="L42" title="All 4 branches covered.">                if (dateTime.isAfter(start) &amp;&amp; dateTime.isBefore(end)) {</span>
+<span class="fc" id="L43">                    return true;</span>
+                }
+            }
+<span class="fc" id="L46">        }</span>
+<span class="fc" id="L47">        return false;</span>
+    }
+
+    private boolean isOverlappingAnotherScreeningsBreakTime(Movie movie, Room room, LocalDateTime dateTime) {
+<span class="fc bfc" id="L51" title="All 2 branches covered.">        for (Screening s : screeningRepository.findAll()) {</span>
+<span class="pc bpc" id="L52" title="1 of 2 branches missed.">            if (s.getRoom().equals(room)) {</span>
+<span class="fc" id="L53">                LocalDateTime start = s.getDateTime().plusMinutes(s.getMovie().getMinutes());</span>
+<span class="fc" id="L54">                LocalDateTime endWithBreakIncluded = start.plusMinutes(10);</span>
+<span class="pc bpc" id="L55" title="1 of 4 branches missed.">                if (dateTime.isAfter(start) &amp;&amp; dateTime.isBefore(endWithBreakIncluded)) {</span>
+<span class="fc" id="L56">                    return true;</span>
+                }
+            }
+<span class="fc" id="L59">        }</span>
+<span class="fc" id="L60">        return false;</span>
+    }
+
+    @Override
+    public void deleteScreening(Movie movie, Room room, LocalDateTime dateTime) {
+<span class="nc" id="L65">        screeningRepository.delete(get(movie, room, dateTime).get());</span>
+<span class="nc" id="L66">    }</span>
+
+    @Override
+    public List&lt;Screening&gt; getScreeningList() {
+<span class="nc" id="L70">        return screeningRepository.findAll();</span>
+    }
+
+    private Optional&lt;Screening&gt; get(Movie movie, Room room, LocalDateTime datetime) {
+<span class="nc" id="L74">        return screeningRepository.findByMovieAndRoomAndDateTime(movie, room, datetime);</span>
+    }
+}
+</pre><div class="footer"><span class="right">Created with <a href="http://www.jacoco.org/jacoco">JaCoCo</a> 0.8.6.202009150832</span></div></body></html>

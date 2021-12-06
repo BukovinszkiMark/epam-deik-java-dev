@@ -2,15 +2,11 @@ package com.epam.training.ticketservice.services.impl;
 
 import com.epam.training.ticketservice.core.room.Room;
 import com.epam.training.ticketservice.core.room.RoomRepository;
-import com.epam.training.ticketservice.core.user.UserRepository;
 import com.epam.training.ticketservice.services.RoomService;
 import org.springframework.stereotype.Service;
 
-import javax.annotation.PostConstruct;
-import java.util.ArrayList;
 import java.util.List;
 import java.util.Optional;
-import java.util.stream.Collectors;
 
 @Service
 public class RoomServiceImpl implements RoomService {

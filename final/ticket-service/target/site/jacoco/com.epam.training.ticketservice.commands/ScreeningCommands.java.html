@@ -1,0 +1,84 @@
+<?xml version="1.0" encoding="UTF-8"?><!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd"><html xmlns="http://www.w3.org/1999/xhtml" lang="hu"><head><meta http-equiv="Content-Type" content="text/html;charset=UTF-8"/><link rel="stylesheet" href="../jacoco-resources/report.css" type="text/css"/><link rel="shortcut icon" href="../jacoco-resources/report.gif" type="image/gif"/><title>ScreeningCommands.java</title><link rel="stylesheet" href="../jacoco-resources/prettify.css" type="text/css"/><script type="text/javascript" src="../jacoco-resources/prettify.js"></script></head><body onload="window['PR_TAB_WIDTH']=4;prettyPrint()"><div class="breadcrumb" id="breadcrumb"><span class="info"><a href="../jacoco-sessions.html" class="el_session">Sessions</a></span><a href="../index.html" class="el_report">ticket-service</a> &gt; <a href="index.source.html" class="el_package">com.epam.training.ticketservice.commands</a> &gt; <span class="el_source">ScreeningCommands.java</span></div><h1>ScreeningCommands.java</h1><pre class="source lang-java linenums">package com.epam.training.ticketservice.commands;
+
+import com.epam.training.ticketservice.commands.availability.CommandAvailability;
+import com.epam.training.ticketservice.core.movie.Movie;
+import com.epam.training.ticketservice.core.room.Room;
+import com.epam.training.ticketservice.core.screening.Screening;
+import com.epam.training.ticketservice.services.AccountService;
+import com.epam.training.ticketservice.services.MovieService;
+import com.epam.training.ticketservice.services.RoomService;
+import com.epam.training.ticketservice.services.ScreeningService;
+import org.springframework.shell.Availability;
+import org.springframework.shell.standard.ShellComponent;
+import org.springframework.shell.standard.ShellMethod;
+import org.springframework.shell.standard.ShellMethodAvailability;
+
+import java.time.LocalDateTime;
+import java.time.format.DateTimeFormatter;
+import java.util.List;
+
+@ShellComponent
+public class ScreeningCommands {
+
+    ScreeningService screeningService;
+    RoomService roomService;
+    MovieService movieService;
+    AccountService accountService;
+
+    public ScreeningCommands(ScreeningService screeningService, RoomService roomService, MovieService movieService,
+<span class="fc" id="L29">                             AccountService accountService) {</span>
+<span class="fc" id="L30">        this.screeningService = screeningService;</span>
+<span class="fc" id="L31">        this.roomService = roomService;</span>
+<span class="fc" id="L32">        this.movieService = movieService;</span>
+<span class="fc" id="L33">        this.accountService = accountService;</span>
+<span class="fc" id="L34">    }</span>
+
+    @ShellMethodAvailability(&quot;userIsAdmin&quot;)
+    @ShellMethod(key = &quot;create screening&quot;, value = &quot;Create new screening.&quot;)
+    public String createScreening(String movieName, String roomName, String dateTimeText) {
+<span class="fc" id="L39">        Movie movie = movieService.getByName(movieName).get();</span>
+<span class="fc" id="L40">        Room room = roomService.getByName(roomName).get();</span>
+<span class="fc" id="L41">        LocalDateTime dateTime = LocalDateTime.parse(dateTimeText, DateTimeFormatter.ofPattern(&quot;yyyy-MM-dd HH:mm&quot;));</span>
+<span class="fc" id="L42">        return screeningService.createScreening(movie, room, dateTime);</span>
+    }
+
+    @ShellMethodAvailability(&quot;userIsAdmin&quot;)
+    @ShellMethod(key = &quot;delete screening&quot;, value = &quot;Update existing screening.&quot;)
+    public void deleteScreening(String movieName, String roomName, String dateTimeText) {
+<span class="fc" id="L48">        Movie movie = movieService.getByName(movieName).get();</span>
+<span class="fc" id="L49">        Room room = roomService.getByName(roomName).get();</span>
+<span class="fc" id="L50">        LocalDateTime dateTime = LocalDateTime.parse(dateTimeText, DateTimeFormatter.ofPattern(&quot;yyyy-MM-dd HH:mm&quot;));</span>
+<span class="fc" id="L51">        screeningService.deleteScreening(movie, room, dateTime);</span>
+<span class="fc" id="L52">    }</span>
+
+    @ShellMethod(key = &quot;list screenings&quot;, value = &quot;List existing screenings.&quot;)
+    public String listScreening() {
+<span class="nc" id="L56">        List&lt;Screening&gt; screenings = screeningService.getScreeningList();</span>
+<span class="nc bnc" id="L57" title="All 2 branches missed.">        if (screenings.isEmpty()) {</span>
+<span class="nc" id="L58">            return &quot;There are no screenings&quot;;</span>
+        }
+<span class="nc" id="L60">        StringBuilder stringBuilder = new StringBuilder();</span>
+<span class="nc bnc" id="L61" title="All 2 branches missed.">        for (Screening s : screenings) {</span>
+<span class="nc" id="L62">            Movie m = s.getMovie();</span>
+<span class="nc" id="L63">            Room r = s.getRoom();</span>
+<span class="nc" id="L64">            stringBuilder.append(m.getName())</span>
+<span class="nc" id="L65">                    .append(&quot; (&quot;)</span>
+<span class="nc" id="L66">                    .append(m.getGenre())</span>
+<span class="nc" id="L67">                    .append(&quot;, &quot;)</span>
+<span class="nc" id="L68">                    .append(m.getMinutes())</span>
+<span class="nc" id="L69">                    .append(&quot; minutes), screened in room &quot;)</span>
+<span class="nc" id="L70">                    .append(r.getName())</span>
+<span class="nc" id="L71">                    .append(&quot;, at &quot;)</span>
+<span class="nc" id="L72">                    .append(s.getDateTime().format(DateTimeFormatter.ofPattern(&quot;yyyy-MM-dd HH:mm&quot;)))</span>
+<span class="nc" id="L73">                    .append(System.lineSeparator());</span>
+<span class="nc" id="L74">        }</span>
+<span class="nc" id="L75">        return stringBuilder.toString();</span>
+
+    }
+
+    private Availability userIsAdmin() {
+<span class="nc" id="L80">        return CommandAvailability.userIsAdmin(accountService.getCurrentUser());</span>
+    }
+
+}
+</pre><div class="footer"><span class="right">Created with <a href="http://www.jacoco.org/jacoco">JaCoCo</a> 0.8.6.202009150832</span></div></body></html>

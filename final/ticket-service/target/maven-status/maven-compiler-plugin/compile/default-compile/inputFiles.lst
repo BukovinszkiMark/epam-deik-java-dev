@@ -2,10 +2,12 @@ C:\Users\Hp\Desktop\Beadandok\Java fejlesztes a gyakorlatban\epam-deik-java-dev\
 C:\Users\Hp\Desktop\Beadandok\Java fejlesztes a gyakorlatban\epam-deik-java-dev\final\ticket-service\src\main\java\com\epam\training\ticketservice\services\MovieService.java
 C:\Users\Hp\Desktop\Beadandok\Java fejlesztes a gyakorlatban\epam-deik-java-dev\final\ticket-service\src\main\java\com\epam\training\ticketservice\commands\RoomCommands.java
 C:\Users\Hp\Desktop\Beadandok\Java fejlesztes a gyakorlatban\epam-deik-java-dev\final\ticket-service\src\main\java\com\epam\training\ticketservice\services\RoomService.java
+C:\Users\Hp\Desktop\Beadandok\Java fejlesztes a gyakorlatban\epam-deik-java-dev\final\ticket-service\src\main\java\com\epam\training\ticketservice\commands\availability\CommandAvailability.java
 C:\Users\Hp\Desktop\Beadandok\Java fejlesztes a gyakorlatban\epam-deik-java-dev\final\ticket-service\src\main\java\com\epam\training\ticketservice\core\room\Room.java
 C:\Users\Hp\Desktop\Beadandok\Java fejlesztes a gyakorlatban\epam-deik-java-dev\final\ticket-service\src\main\java\com\epam\training\ticketservice\services\ScreeningService.java
 C:\Users\Hp\Desktop\Beadandok\Java fejlesztes a gyakorlatban\epam-deik-java-dev\final\ticket-service\src\main\java\com\epam\training\ticketservice\core\screening\ScreeningRepository.java
 C:\Users\Hp\Desktop\Beadandok\Java fejlesztes a gyakorlatban\epam-deik-java-dev\final\ticket-service\src\main\java\com\epam\training\ticketservice\core\user\UserRepository.java
+C:\Users\Hp\Desktop\Beadandok\Java fejlesztes a gyakorlatban\epam-deik-java-dev\final\ticket-service\src\main\java\com\epam\training\ticketservice\commands\exit\ExitCommand.java
 C:\Users\Hp\Desktop\Beadandok\Java fejlesztes a gyakorlatban\epam-deik-java-dev\final\ticket-service\src\main\java\com\epam\training\ticketservice\commands\MovieCommands.java
 C:\Users\Hp\Desktop\Beadandok\Java fejlesztes a gyakorlatban\epam-deik-java-dev\final\ticket-service\src\main\java\com\epam\training\ticketservice\core\screening\Screening.java
 C:\Users\Hp\Desktop\Beadandok\Java fejlesztes a gyakorlatban\epam-deik-java-dev\final\ticket-service\src\main\java\com\epam\training\ticketservice\Application.java

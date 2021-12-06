@@ -6,8 +6,6 @@ import com.epam.training.ticketservice.services.AccountService;
 import org.springframework.stereotype.Service;
 
 import javax.annotation.PostConstruct;
-import java.util.ArrayList;
-import java.util.List;
 import java.util.Optional;
 
 @Service
@@ -53,7 +51,9 @@ public class AccountServiceImpl implements AccountService {
             return "You are not signed in";
         }
         if (currentUser.getRole().equals(User.Role.ADMIN)) {
-            return "Signed in with privileged account '" + currentUser.getUsername() + "'";
+            return new StringBuilder().append("Signed in with privileged account '")
+                    .append(currentUser.getUsername())
+                    .append("'").toString();
         }
         return "USER role handling is not yet implemented";
     }

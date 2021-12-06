@@ -1,0 +1,7 @@
+com\epam\training\ticketservice\services\MovieServiceImplTest.class
+com\epam\training\ticketservice\services\ScreeningServiceImplTest.class
+com\epam\training\ticketservice\services\RoomServiceImplTest.class
+com\epam\training\ticketservice\commands\availability\CommandAvailabilityTest.class
+com\epam\training\ticketservice\commands\ScreeningCommandsTest.class
+com\epam\training\ticketservice\commands\RoomCommandsTest.class
+com\epam\training\ticketservice\commands\MovieCommandsTest.class
